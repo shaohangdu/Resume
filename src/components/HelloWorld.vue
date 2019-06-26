@@ -14,7 +14,7 @@
     </div>
 
     <div class="container mb-7">
-        <div>
+        <div class="section-rotate-fixed">
             <h2 class="font-weight-bold m-4">網頁前端開發技能</h2>
             <div class="row">
                 <div class="col-4">
@@ -50,82 +50,86 @@
         </div>
     </div>
 
-    <div class="container mb-7">
-        <div class="row">
-            <div class="col-6 ">
-                <h2 class="m-b-2 font-weight-bold">
-                    學業、經歷
-                </h2>
-                <div class="timeline-section">
-                    <div class="row my-3 timeline-pointer">
-                        <div class="col-12">
-                            <h3> 2010年 就學 - 2014年 畢業</h3>
-                            <p> 學業 : 嘉南藥理科技大學，資訊多媒體應用系 畢業</p>
+    <div class="mb-7 bg-gradient1 text-white section-rotate">
+        <div class="container section-rotate-fixed">
+            <div class="row">
+                <div class="col-6 ">
+                    <h2 class="m-b-2 font-weight-bold">
+                        學業、經歷
+                    </h2>
+                    <div class="timeline-section">
+                        <div class="row my-3 timeline-pointer">
+                            <div class="col-12">
+                                <h3> 2010年 就學 - 2014年 畢業</h3>
+                                <p> 學業 : 嘉南藥理科技大學，資訊多媒體應用系 畢業</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row my-3 timeline-pointer">
-                        <div class="col-12">
-                            <h3> 2014年 入伍 - 2019年 退役 </h3>
-                            <p> 中華民國陸軍，志願役士兵</p>
+                        <div class="row my-3 timeline-pointer">
+                            <div class="col-12">
+                                <h3> 2014年 入伍 - 2019年 退役 </h3>
+                                <p> 中華民國陸軍，志願役士兵</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row my-3 timeline-pointer">
-                        <div class="col-12">
-                            <h3> 2019年 退役 - 至今 </h3>
-                            <p> 待業中，並持續學習前端技術</p>
+                        <div class="row my-3 timeline-pointer">
+                            <div class="col-12">
+                                <h3> 2019年 退役 - 至今 </h3>
+                                <p> 待業中，並持續學習前端技術</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <h2 class="text-center m-b-2 font-weight-bold">
-                            技能熟練度
-                </h2>
-                <section id="skills" >
-                    <div class="m-b-1">
-                        <span><span class="fab fa-html5"></span> HTML</span>
-                        <div class="progress">
-                            <div class="progress-bar" data-progress="85">
-                                85
+                <div class="col-6">
+                    <h2 class="text-center m-b-2 font-weight-bold">
+                                技能熟練度
+                    </h2>
+                    <section id="skills" >
+                        <div class="m-b-1">
+                            <span><span class="fab fa-html5"></span> HTML</span>
+                            <div class="progress">
+                                <div class="progress-bar" data-progress="85">
+                                    85
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="m-b-1">
-                        <span><span class="fab fa-css3-alt"></span> CSS3</span>
-                        <div class="progress">
-                            <div class="progress-bar" data-progress="70" >
-                                70
+                        <div class="m-b-1">
+                            <span><span class="fab fa-css3-alt"></span> CSS3</span>
+                            <div class="progress">
+                                <div class="progress-bar" data-progress="70" >
+                                    70
+                                </div>
                             </div>
                         </div>
-                     </div>
-                    <div class="m-b-1">
-                        <span><span class="fab fa-js"></span> JavaScript </span>
-                        <div class="progress">
-                            <div class="progress-bar" data-progress="60" >
-                                60
+                        <div class="m-b-1">
+                            <span><span class="fab fa-js"></span> JavaScript </span>
+                            <div class="progress">
+                                <div class="progress-bar" data-progress="60" >
+                                    60
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="m-b-1">
-                        <span><span class="fab fa-git-alt"></span> Git </span>
-                        <div class="progress">
-                            <div class="progress-bar" data-progress="70" >
-                                70
+                        <div class="m-b-1">
+                            <span><span class="fab fa-git-alt"></span> Git </span>
+                            <div class="progress">
+                                <div class="progress-bar" data-progress="70" >
+                                    70
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="m-b-1">
-                        <span><span class="fab fa-vuejs"></span> Vue</span>
-                        <div class="progress">
-                            <div class="progress-bar" data-progress="50" >
-                                50
+                        <div class="m-b-1">
+                            <span><span class="fab fa-vuejs"></span> Vue</span>
+                            <div class="progress">
+                                <div class="progress-bar" data-progress="50" >
+                                    50
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
         </div>
     </div>
+
+    
 
     <div class="container mb-7">
         <div>
@@ -133,7 +137,7 @@
             <div class="row ">
                 <div class="col-4">
                     <h4> HTML , CSS 排版</h4> 
-                    <a href="#"><div class="box">暫時存放</div></a>
+                    <router-link to="/html"><div class="box">暫時存放</div></router-link>
                 </div>
                 <div class="col-4">
                     <h4> 高雄市政府JSON檔</h4> 
@@ -191,6 +195,11 @@ export default {
 
 
 <style lang="scss">
+
+$brand-accent: #e26789;
+$progress-height: 20px;
+$brand-primary: #039dff;
+
 .box{
     width:200px;
     height:200px;
@@ -233,8 +242,6 @@ export default {
     }
 }
 
-$brand-accent: #e26789;
-$progress-height: 20px;
 
 //** Progress bar **//
 .progress {
@@ -259,5 +266,20 @@ $progress-height: 20px;
   box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
   transition: width 1s ease;
 }
+
+.section-rotate {
+  transform: rotate(-7deg);
+  margin-left: -80px;
+  margin-right: -80px;
+  padding: 70px 80px 10px 80px;
+  .section-rotate-fixed {
+    transform: rotate(7deg);
+  }
+}
+
+.bg-gradient1 {
+  background-image: linear-gradient(45deg, #59f0ff, $brand-primary);
+}
+
 
 </style>
