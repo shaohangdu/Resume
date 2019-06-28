@@ -1,0 +1,55 @@
+//手機版型各斷點
+@mixin  pad {
+    @media (max-width:767px) {
+        @content
+    }
+};
+@mixin  pad-m {
+    @media (max-width:1024px) {
+        @content
+    }
+};
+@mixin  pad-l {
+    @media (max-width:1200px) {
+        @content
+    }
+};
+@mixin  iphone7 {
+    @media (max-width:600px) {
+        @content
+    }
+};
+@mixin  mobile {
+    @media (max-width:480px) {
+        @content
+    }
+};
+
+@mixin  iphone5 {
+    @media (max-width:320px) {
+        @content
+    }
+};
+
+//常用
+@mixin Acolor($backColor,$colour){
+    background: $backColor;
+    color: $colour;
+    padding: 10px;
+    border-radius: 5px;
+};
+@mixin flex {
+    display: flex;
+    align-items: stretch;
+};
+@mixin Float($width,$margin){
+    float: left;
+    width: $width;
+    margin: $margin;
+};
+
+.clearfix:after{/*清除浮動floot元素*/
+	content:'';
+    display:table;
+	clear: both;
+}
