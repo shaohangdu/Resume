@@ -1,0 +1,436 @@
+.content{
+    @include flex();
+    padding: 0 30px;
+    margin-top: 30px;
+    >div{
+        box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.15);
+        ul{
+            background: white;
+            padding: 30px;
+            h2{
+                margin-bottom: 30px;
+                padding: 10px 25px;
+                background: rgba(0, 0, 0, 0.2);
+                border-left: 3px solid #ed3974;
+                font-size: 20px;
+            }
+            li{
+                color: black;
+                @include flex;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                div{
+                    flex: 1;
+                    img{
+                        color: white;
+                        width: 100%;
+                    }
+                }
+                .blog-content{
+                    flex: 2;
+                    padding-left: 15px;
+                    display: flex;
+                    flex-direction:column;
+                    justify-content:space-between;
+                    a{
+                        letter-spacing: 1px;
+                        color: black;
+                        font-size: 16px;
+                        font-weight: 500;
+                        &:hover{
+                            color:#ed3974;
+                            opacity: 1;
+                        }
+                    }
+                    p{
+                        margin: 10px 0;
+                        a{
+                            font-size: 14px;
+                            margin-right: 10px;
+                            opacity: 0.5;
+                            color: black;
+                        }
+                    }
+                    .btn{
+                        text-align: center;
+                        width: 120px;
+                        padding: 10px;
+                        font-size: 14px;
+                        background: #ed3974;
+                        color: white;
+                        &:hover{
+                            background: #404040;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .leftImg{
+            margin: 20px 0;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+    .Toastsleft{
+        flex: 1;
+        order: 1;
+    }
+    .Toastscenter{
+        flex:3;
+        order: 2;
+        margin: 0 30px;
+        padding: 30px;
+        .now{
+            margin-bottom: 30px;
+            background: rgba(0, 0, 0, 0.2);
+            border-left: 3px solid #ed3974;
+            font-size: 20px;
+            h2{
+                display:inline-block;
+                padding: 10px 25px;
+            }
+            i{
+                display: inline-block;
+                float: right;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                background: #e1e1e1;
+                &:hover{
+                    background: #ed3974;
+                    color: white;
+                }
+            }
+        }
+        .trending{
+            margin-bottom: 30px;
+            ul{
+                padding: 0;
+                li{
+                    display: block;
+                    @include Float(31.3333%,1%);
+                    border-bottom: 0px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 150px;
+                    position: relative;
+                    z-index: 0;
+                    &::before{
+                        content:'';
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        background:rgba(0,0,0,0.5);
+                        z-index: -1;
+                    }
+                    h3{
+                        margin-left: 15px;
+                        margin-top: 70px;
+                        margin-bottom: 8px;
+                        a{
+                            color: #ed3974;
+                            &:hover{
+                                color: white;
+                            }
+                        }
+                    }
+                    p{
+                        margin-left: 15px;
+                        a{
+                            &:hover{
+                                color: #ed3974;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .featur{
+            @include flex();
+            >div{
+                flex: 1;
+                padding:  0 15px ;
+                ul{
+                    background: white;
+                    padding:0;
+                    li{
+                        color: black;
+                        @include flex;
+                        padding-bottom: 15px;
+                        margin-bottom: 15px;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                        div{
+                            flex: 1;
+                            img{
+                                color: white;
+                                width: 100%;
+                            }
+                        }
+                        .blog-content{
+                            flex: 2;
+                            padding-left: 15px;
+                            a{
+                                letter-spacing: 1px;
+                                color: black;
+                                font-size: 16px;
+                                font-weight: 500;
+                                &:hover{
+                                    color:#ed3974;
+                                    opacity: 1;
+                                }
+                            }
+                            p{
+                                a{
+                                    padding: 0;
+                                    font-size: 14px;
+                                    margin-right: 10px;
+                                    opacity: 0.5;
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .featur-data{
+                flex: 1;
+                .Overview{
+                    width: 100%;
+                    div{
+                        margin-bottom: 20px;
+                        margin-top: 60px;
+                        a{
+                            @include Acolor(0,#ed3974);
+                            font-size: 14px;
+                            letter-spacing: 2px;
+                            &:hover{
+                                color: white;
+                            }
+                        }
+                    }
+                    h2{
+                        margin-bottom: 20px;
+                        a{
+                            @include Acolor(0,black);
+                            padding: 0;
+                            font-size:30px;
+                            line-height: 45px;
+                            &:hover{
+                                color: #ed3974;
+                            }
+                        }
+                    }
+                }
+                p{
+                    opacity: 0.5;
+                    margin-bottom: 16px;
+                    font-size: 14px;
+                    line-height: 28px;
+                    a{
+                        padding: 0;
+                        font-size: 14px;
+                        margin-left: 16px;
+                        color: black;
+                        display: inline-block;
+                    }
+                    .box{
+                        display: inline-block;
+                        float: right;
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: center;
+                        background: black;
+                        color: white;
+                    }
+                    .nonoe{
+                        display: none;
+                    }
+                    .blue{
+                        background: #4b6cd0;
+                    }
+                    .red{
+                        background: #f03b3b;
+                    }
+                    .ray{
+                        background: #bb8950;
+                    }
+                    .whiteBlue{
+                        background: #49a7f3;
+                    }
+                }
+                .featur-box{
+                    line-height: 40px;
+                    border: 1px solid rgba(0,0,0,0.5);
+                    opacity: 1;
+                    a{
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+        }
+        .MostViewd{
+            margin-bottom: 30px;
+            ul{
+                padding: 0;
+                li{
+                    display: block;
+                    @include Float(31.3333%,1%);
+                    border: 0px;
+                    h3{
+                        margin-bottom: 10px;
+                       a{
+                            opacity: 1;
+                            font-size: 22px;
+                            margin: 0;
+                            line-height: 33px;
+                       }
+                    }
+                    a{
+                        color: #000;
+                        opacity: 0.5;
+                        font-size: 14px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+        .list{
+            ul{
+                li{
+                    @include Float(48%,1%);
+                    div{
+                        
+                        a{
+                            font-size: 18px;
+                            margin-bottom: 15px;
+                        }
+                        p{
+                            a{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .ToastsRight{
+        flex: 1;
+        order: 3;
+        .FansBtn{
+            padding:30px;
+            .blue{
+                background: #4b6cd0;
+            }
+            .red{
+                background: #f03b3b;
+            }
+            .ray{
+                background: #bb8950;
+            }
+            .whiteBlue{
+                background: #49a7f3;
+            }
+            div{
+                margin-bottom: 10px;
+                a{
+                    padding:0 25px;
+                    width: 100%;
+                    text-align: center;
+                    height: 50px;
+                    line-height: 50px;
+                    i{
+                        padding-right: 5px;
+                    }
+                }
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
+        }
+        ul{
+            li{
+                font-size: 16px;
+                border-bottom: 0px;
+                a{
+                    width: 100%;
+                    color: #000;
+                    span{
+                        float: right;
+                    }
+                    &:hover{
+                        color: #ed3974;
+                    }
+                }
+            }
+        }
+        .Sletter{
+            padding: 30px;
+            p,input{
+                margin-bottom: 10px;
+                font-size: 14px;
+                color: #777777;
+                line-height: 28px;
+            }
+            input,a{
+                width: 100%;
+                display: block;
+                background: #a6a6a6;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                border: 0px;
+            }
+            a{
+                background: #ed3974;
+            }
+        }
+
+    
+    }
+}
+@include pad-l{
+    .content{
+        display: block;
+        .Toastsleft,.ToastsRight{
+            @include Float(46%,2%);
+        }
+        .Toastscenter{
+            margin: 0 15px;
+        }
+    }
+    
+}
+@include iphone7{
+    .content{
+        padding: 0;
+        .Toastsleft,.ToastsRight{
+            @include Float(96%,2%);
+        }
+        .Toastscenter{
+            margin: 0;
+            padding: 0px;
+            .trending,.MostViewd,.list{
+                ul{
+                    li{
+                        @include Float(98%,1%);
+                    }
+                }
+            }
+            .featur{
+                display: block;
+            }
+        }
+    }
+}

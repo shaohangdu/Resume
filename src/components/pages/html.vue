@@ -23,13 +23,18 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
+@import 'src/assets/helpers/Html-Index.scss';
 
 .wrap{
     max-width: 100%;
     font-family: "Poppins", sans-serif;
+    border:1px solid black;
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 </style>
 

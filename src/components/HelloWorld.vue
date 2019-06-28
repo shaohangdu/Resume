@@ -137,7 +137,7 @@
             <div class="row ">
                 <div class="col-4">
                     <h4> HTML , CSS 排版</h4> 
-                    <router-link to="/html"><div class="box">暫時存放</div></router-link>
+                    <router-link to="/html"><img src="@/assets/html-title.jpg" class="img-fluid" width="300"></router-link>
                 </div>
                 <div class="col-4">
                     <h4> 高雄市政府JSON檔</h4> 
@@ -280,6 +280,5 @@ $brand-primary: #039dff;
 .bg-gradient1 {
   background-image: linear-gradient(45deg, #59f0ff, $brand-primary);
 }
-
 
 </style>
