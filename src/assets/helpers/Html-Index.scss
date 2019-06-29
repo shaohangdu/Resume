@@ -1,6 +1,5 @@
-@import "./_reast";
-@import "./_ipad";
+@import './ipad';
 
-@import "./_html-header";
-@import "./_html-conten"; 
-@import "./_html-footer";
+@import './html-header';
+@import './html-conten';
+@import './html-footer';

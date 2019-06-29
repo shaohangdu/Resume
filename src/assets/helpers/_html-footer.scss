@@ -1,11 +1,28 @@
-.footer{
+.html-footer{
     background-color: #111111;
     font-size: 14px;
     .component{
+        @include pad-l{
+            max-width: 1024px;
+        }
+        @include pad-m{
+            max-width: 800px;
+        }
         max-width: 1200px;
         margin: 0 auto; 
         padding: 40px 0;
         >div{
+            @include pad-l{
+                @include Float(46%,1%);
+                padding: 0 5px;
+            }
+            @include pad-m{
+                @include Float(46%,1%);
+                padding: 0 5px;
+            }
+            @include iphone7{
+                @include Float(98%,1%);
+            }
             @include Float(25%,0%);
             padding: 0 15px;
             color: white;
@@ -117,15 +134,26 @@
         }
     }
     .AtLast{
+        @include pad-l{
+            max-width: 1024px;
+            text-align: center;
+        }
         max-width: 1200px;
         margin: 0 auto;
         font-size: 14px;
         p{
+            @include pad-l{
+                display: block;
+            }
             color: white;
             display: inline-block;
             padding: 10px 0;
         }
         ul{
+            @include pad-l{
+                float: none;
+                display:inline-block;
+            }
             padding: 10px 0;
             float: right;
             li{
@@ -140,45 +168,4 @@
         }
     }
 }
-@include pad-l{
-    .footer{
-        .component{
-            max-width: 1024px;
-            >div{
-                @include Float(25%,0%);
-                padding: 0 5px;
-            }
-        }
-        .AtLast{
-            max-width: 1024px;
-            text-align: center;
-            p{
-               display: block;
-            }
-            ul{
-               float: none;
-               display:inline-block;
-            }
-        }
-    }
-}
-@include pad-m{
-    .footer{
-        .component{
-            max-width: 800px;
-            >div{
-                @include Float(46%,1%);
-                padding: 0 5px;
-            }
-        }
-    }
-}
-@include iphone7{
-    .footer{
-        .component{
-            >div{
-                @include Float(98%,1%);
-            }
-        }
-    }
-}
+

@@ -1,6 +1,6 @@
 <template>
     <div>
-         <div class="footer clearfix">
+         <div class="html-footer clearfix">
             <div class="component clearfix">
                 <div class="logo">
                     <img src="../assets/img/logo2.png" alt="">
@@ -99,7 +99,7 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+@import "../assets/helpers/reast";
 </style>
 

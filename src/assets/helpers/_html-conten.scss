@@ -1,7 +1,13 @@
-.content{
+.html-content{
     @include flex();
     padding: 0 30px;
     margin-top: 30px;
+    @include pad-l{
+        display: block;
+    }
+    @include iphone7{
+        padding: 0;
+    }
     >div{
         box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.15);
         ul{
@@ -77,10 +83,23 @@
 
     }
     .Toastsleft{
+        @include pad-l{
+            @include Float(46%,2%);
+        }
+        @include iphone7{
+            @include Float(96%,2%);
+        }
         flex: 1;
         order: 1;
     }
     .Toastscenter{
+        @include pad-l{
+            margin: 0 15px;
+        }
+        @include iphone7{
+            margin: 0;
+            padding: 0px;
+        }
         flex:3;
         order: 2;
         margin: 0 30px;
@@ -95,12 +114,11 @@
                 padding: 10px 25px;
             }
             i{
-                display: inline-block;
                 float: right;
                 width: 40px;
-                height: 40px;
+                height: 44px;
                 text-align: center;
-                line-height: 40px;
+                line-height: 44px;
                 background: #e1e1e1;
                 &:hover{
                     background: #ed3974;
@@ -113,6 +131,9 @@
             ul{
                 padding: 0;
                 li{
+                    @include iphone7{
+                        @include Float(98%,1%); 
+                    }
                     display: block;
                     @include Float(31.3333%,1%);
                     border-bottom: 0px;
@@ -154,6 +175,9 @@
             }
         }
         .featur{
+            @include iphone7{
+                display: block;
+            }
             @include flex();
             >div{
                 flex: 1;
@@ -242,7 +266,6 @@
                         display: inline-block;
                     }
                     .box{
-                        display: inline-block;
                         float: right;
                         width: 40px;
                         height: 40px;
@@ -283,6 +306,9 @@
             ul{
                 padding: 0;
                 li{
+                    @include iphone7{
+                        @include Float(98%,1%); 
+                    }
                     display: block;
                     @include Float(31.3333%,1%);
                     border: 0px;
@@ -307,6 +333,9 @@
         .list{
             ul{
                 li{
+                    @include iphone7{
+                        @include Float(98%,1%); 
+                    }
                     @include Float(48%,1%);
                     div{
                         
@@ -326,6 +355,12 @@
         }
     }
     .ToastsRight{
+        @include pad-l{
+            @include Float(46%,2%);
+        }
+        @include iphone7{
+            @include Float(96%,2%);
+        }
         flex: 1;
         order: 3;
         .FansBtn{
@@ -398,39 +433,5 @@
         }
 
     
-    }
-}
-@include pad-l{
-    .content{
-        display: block;
-        .Toastsleft,.ToastsRight{
-            @include Float(46%,2%);
-        }
-        .Toastscenter{
-            margin: 0 15px;
-        }
-    }
-    
-}
-@include iphone7{
-    .content{
-        padding: 0;
-        .Toastsleft,.ToastsRight{
-            @include Float(96%,2%);
-        }
-        .Toastscenter{
-            margin: 0;
-            padding: 0px;
-            .trending,.MostViewd,.list{
-                ul{
-                    li{
-                        @include Float(98%,1%);
-                    }
-                }
-            }
-            .featur{
-                display: block;
-            }
-        }
     }
 }

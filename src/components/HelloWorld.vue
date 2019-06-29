@@ -8,8 +8,9 @@
                 <a href="#" class="text-dark"><i class="fab fa-github fa-2x"></i></a>
                 <a href="#" class="text-dark"><i class="fab fa-facebook fa-2x"></i></a>
             </div>
-            <a href="#">shaohangdu@gmail.com</a>
-            <p class="mt-4">自我介紹:剛退伍半年，經過朋友介紹"六角學院"，便開始了學習前端技術的旅程</p>
+            <a href="#" class="text-dark ">shaohangdu@gmail.com</a>
+            <p class="mt-2"> Tel: 0983830081 </p>
+            <p class="mt-2">自我介紹:剛退伍半年，經過朋友介紹，便開始了學習前端技術的旅程</p>
         </div>
     </div>
 
@@ -17,7 +18,7 @@
         <div class="section-rotate-fixed">
             <h2 class="font-weight-bold m-4">網頁前端開發技能</h2>
             <div class="row">
-                <div class="col-4">
+                <div class="col-md-4 col-12">
                     <h4 class="ml-4 pt-2 SkillBorder "> HTML , CSS</h4> 
                     <div class="text-center"><i class="fab fa-html5 fa-5x text-primary mr-2"></i><i class="fab fa-bootstrap fa-5x text-purple"></i></div>
                     <ul>
@@ -27,7 +28,7 @@
                         <li>RWD 的 CSS 語法、技巧</li>
                     </ul>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-12">
                     <h4 class="ml-4 pt-2 SkillBorder"> JavaScript </h4> 
                     <div class="text-center"><i class="fab fa-js fa-5x text-warning mr-2"></i><i class="fab fa-vuejs fa-5x text-success"></i></div>
                     <ul>
@@ -37,9 +38,9 @@
                         <li> Ajax / Axios 串接 API 撈取遠端 JSON 資料</li>
                     </ul>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-12">
                     <h4 class="ml-4 pt-2 SkillBorder"> Tools </h4>
-                    <div class="text-center"><i class="fab fa-github fa-5x mr-2"></i></div>
+                    <div class="text-center"><i class="fab fa-github fa-5x mr-2"></i><i class="fab fa-git-alt fa-5x text-Tangerine"></i></div>
                     <ul>
                         <li> Git / npm </li>
                         <li> Github / Gitlab </li>
@@ -53,7 +54,7 @@
     <div class="mb-7 bg-gradient1 text-white section-rotate">
         <div class="container section-rotate-fixed">
             <div class="row">
-                <div class="col-6 ">
+                <div class="col-md-6 col-12">
                     <h2 class="m-b-2 font-weight-bold">
                         學業、經歷
                     </h2>
@@ -78,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6 col-12">
                     <h2 class="text-center m-b-2 font-weight-bold">
                                 技能熟練度
                     </h2>
@@ -135,16 +136,16 @@
         <div>
             <h2 class="font-weight-bold m-4">作品集</h2>
             <div class="row ">
-                <div class="col-4">
-                    <h4> HTML , CSS 排版</h4> 
-                    <router-link to="/html"><img src="@/assets/html-title.jpg" class="img-fluid" width="300"></router-link>
+                <div class="col-md-4 col-12">
+                    <h4 class="mt-2 pt-2 SkillBorder"> HTML , CSS 排版</h4> 
+                    <router-link to="/html"><img src="@/assets/html-title.jpg" class="img-fluid"></router-link>
                 </div>
-                <div class="col-4">
-                    <h4> 高雄市政府JSON檔</h4> 
-                    <router-link to="/ajax"><div class="box">暫時存放</div></router-link>>
+                <div class="col-md-4 col-12">
+                    <h4 class="mt-2 pt-2 SkillBorder"> 高雄市政府JSON檔</h4> 
+                    <router-link to="/ajax"><div class="box">暫時存放</div></router-link>
                 </div>
-                <div class="col-4">
-                    <h4> Vue 電商購物網站 </h4> 
+                <div class="col-md-4 col-12">
+                    <h4 class="mt-2 pt-2 SkillBorder"> Vue 電商購物網站 </h4> 
                     <a href="#"><div class="box">暫時存放</div></a>
                 </div>
             </div>
@@ -194,6 +195,6 @@ export default {
 </script>
 
 
-<style lang="scss">
-
+<style lang="scss" >
+@import '../assets/helpers/ihome.scss';
 </style>

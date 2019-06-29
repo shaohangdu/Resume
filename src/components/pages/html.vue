@@ -24,9 +24,7 @@ export default {
 </script>
 
 <style lang="scss">
-
-@import 'src/assets/helpers/Html-Index.scss';
-
+@import "../../assets/helpers/Html-Index";
 .wrap{
     max-width: 100%;
     font-family: "Poppins", sans-serif;
@@ -36,5 +34,6 @@ a{
     text-decoration: none;
     color: white;
 }
+
 </style>
 

@@ -3,7 +3,7 @@
 
 .wrap{
     margin: 0 auto;
-    .header{
+    .ajax-header{
         text-align: center;
         background-position: center;
         background-size: cover;
@@ -29,7 +29,7 @@
             border-radius:5px;
         }
     }
-    .conten{
+    .ajax-conten{
         .MenuList{
             min-width: 20%;
             float: left;
@@ -74,7 +74,7 @@
             }
         }
     }
-    .footer{
+    .ajax-footer{
         margin: 0 auto;
         padding: 20px;
         background: blue;

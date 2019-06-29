@@ -1,4 +1,4 @@
-.header{
+.html-header{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -24,6 +24,11 @@
         height: 70px;
         line-height: 70px;
         z-index: 3;
+        @include pad-m{
+            .open{
+                transform: translateX(0px);
+            }
+        }
         h1{
             width: 74px;
             float: left;
@@ -38,6 +43,9 @@
             float: right;
         }
         .header-btn{
+            @include iphone7{
+                display: none;
+            }
             background-color: #ed3974;
             a{
                 @include Acolor(#ed3974,white);
@@ -48,6 +56,9 @@
             border-left: 1px solid #ebebeb;
         }
         .search{
+            @include iphone7{
+                display: none;
+            }
             input{
                 padding: 0;
                 border: none;
@@ -59,8 +70,22 @@
         }
         .menu{
             border-right: 1px solid #ebebeb;
+            @include pad-m{
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                background: white;
+                padding: 20px 40px;
+                transition: transform .5s;
+                transform: translateX(-150px);
+            }
             >ul{
                 >li{
+                    @include pad-m{
+                        float: none;
+                        padding: 0px;
+                    }
                     float: left;
                     padding: 0 12px;
                     font-size: 13px;
@@ -89,6 +114,9 @@
                         border: 1px solid white;
                         background: white;
                         li{
+                            @include pad-m{
+                                position: relative;
+                            }
                             float: none;
                             height: 25px;
                             color: black;                    
@@ -128,6 +156,12 @@
         }
         .showmenu{
             display: none;
+            @include pad-m{
+                display: block;
+                color: black;
+                float: right;
+                margin-right: 20px;
+            }
         }
     }
     .Overview{
@@ -161,53 +195,6 @@
                 bottom: 0;
                 font-size: 20px;
                 color:white;
-            }
-        }
-    }
-}
-@include pad-m{
-    .header{
-        .nav-header{
-            .menu{
-                position: fixed;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                background: white;
-                padding: 20px 40px;
-                transition: transform .5s;
-                transform: translateX(-150px);
-                ul{
-                    li{
-                    float: none;
-                    padding: 0px;
-                    }
-                }
-                .Dropdown{
-                    ul{
-                        li{
-                            position: relative;
-                        }
-                    }
-                }
-            }
-            .open{
-                transform: translateX(0px);
-            }
-            .showmenu{
-                display: block;
-                color: black;
-                float: right;
-                margin-right: 20px;
-            }
-        }
-    }
-}
-@include iphone7{
-    .header{
-        .nav-header{
-            .header-btn,.search{
-                display: none;
             }
         }
     }

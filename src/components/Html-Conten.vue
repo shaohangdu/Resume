@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="content clearfix">
+        <div class="html-content clearfix">
             <div class="Toastscenter clearfix">
                 <div class="now">
                     <h2>TRENDING NOW</h2>
@@ -502,7 +502,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content{
+@import "../assets/helpers/reast";
+.html-content{
     .Toastscenter{
         .trending{
             ul{
