@@ -1,0 +1,84 @@
+$brand-accent: #e26789;
+$progress-height: 20px;
+$brand-primary: #039dff;
+
+.box{
+    width:200px;
+    height:200px;
+    background-color:red;
+}
+.SkillBorder{
+    border-top:10px solid #3d2714;
+}
+// 時間軸
+.timeline-section,.timeline-pointer{
+    position: relative;
+}
+.timeline-section::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -10px;
+    background: black;
+    width: 1px;
+    transform: translateX(-50%);
+}
+.timeline-pointer::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    // transform: translateX(-50%);
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    z-index: 1;
+}
+@media (max-width:576px){
+    .timeline-section::after,.timeline-pointer::after{
+        display: none;
+    }
+}
+
+
+//** Progress bar **//
+.progress {
+  height: $progress-height;
+  overflow: hidden;
+  background-color: rgba(#fafafa, .45);
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  position: relative;
+}
+.progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  font-size: 12px;
+  line-height: $progress-height;
+  color: #fff;
+  text-align: center;
+  background-color: $brand-accent;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  transition: width 1s ease;
+}
+
+.section-rotate {
+  transform: rotate(-7deg);
+  margin-left: -80px;
+  margin-right: -80px;
+  padding: 70px 80px 10px 80px;
+  .section-rotate-fixed {
+    transform: rotate(7deg);
+  }
+}
+
+.bg-gradient1 {
+  background-image: linear-gradient(45deg, #59f0ff, $brand-primary);
+}

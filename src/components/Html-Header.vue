@@ -1,6 +1,6 @@
 <template>
     <div>
-    <div class="header">
+        <div class="header">
             <div class="nav-header">
                 <h1><a>Mag</a></h1>
                 <div class="header-btn"><a>SUBMIT VIDEO</a></div>
