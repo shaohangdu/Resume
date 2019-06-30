@@ -167,23 +167,22 @@ export default {
   },
   methods: {
       progress(){
-        $(document).ready(function(){
-            var showSkill =false;
+            let showSkill =false;
             $(window).scroll(function(){   
-                var scrollPos =$(window).scrollTop();//從Window整個網頁取得現在滾動Y值
-                var windowHeight = $(window).height();//取得網頁高度 
+                let scrollPos = $(window).scrollTop();//從Window整個網頁取得現在滾動Y值
+                let windowHeight = $(window).height();//取得網頁高度 
                 //進度條progress bor
-                var SkillTop =$('#skills').position().top;
+                let SkillTop = $('#skills').position().top;
                 // console.log(SkillTop);
                 if(SkillTop<=(scrollPos + windowHeight /2) && !showSkill){ //當技能熟練度在網頁中間時執行
                     showSkill =true;
                     $('#skills .progress-bar').each(function(){
-                    var thisValue = $(this).data('progress');
+                    let thisValue = $(this).data('progress');
                     $(this).css('width',thisValue + '%');
                     });
                 }
             });
-        });
+
       },
   },
   created() {

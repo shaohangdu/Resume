@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="wrap">
+        <div class="wrap" id="skills">
             <div class="ajax-header">
                 <h1> 高 雄 市 政 府 文 化 局 </h1>
                 <select class="selectClass">
@@ -12,18 +12,30 @@
                     <h2><i class="fas fa-user-astronaut pr-2 text-danger"></i>分類</h2>
                     <div class="btnAdmin">
                         <div ><input type="button" value="圖書館" class="blue"></div>
-                        <div ><input type="button" value="圖書館" class="whiteBlue"></div>
-                        <div ><input type="button" value="圖書館" class="ray"></div>
-                        <div ><input type="button" value="圖書館" class="red"></div>
+                        <div ><input type="button" value="岡山文化中心" class="whiteBlue"></div>
+                        <div ><input type="button" value="電影館" class="ray"></div>
+                        <div ><input type="button" value="歷史博物館" class="red"></div>
                     </div>
                 </div>
                 <div class="article">
-                    <ul>
-                        <li>123</li>
-                        <li>123</li>
-                        <li>123</li>
-                        <li>123</li>
-                    </ul>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 my-2" v-for="(item, key) in dataAll" :key="item.id">
+                                <div class="row no-gutters border rounded shadow-sm h-md-250 position-relative">
+                                    <div class="col-8 p-4 d-flex flex-column position-static">
+                                        <strong class="d-inline-block mb-2 text-primary">Design</strong>
+                                        <h5 class="mb-0">post title</h5>
+                                        <div class="mb-1 text-muted">{{item.MUSEUM_POSTUNIT }}</div>
+                                        <div class="OverScroll"><p>{{item.MUSEUM_DESC }}</p></div>
+                                        <a :href="item.MUSEUM_URL">{{ item.MUSEUM_URL_Name }}</a>
+                                    </div>
+                                    <div class="col-4 d-none d-lg-block">
+                                        <img :src="item.MUSEUM_IMAGE" class="img-fluid"  width="200" height="250">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="ajax-footer">
@@ -36,10 +48,45 @@
 
 
 <script>
-// http://opendata.khcc.gov.tw/public/OD_khcc_museum.ashx?SDate=2019/06/24&EDate=2019/12/24
-export default {
+import $ from 'jquery';
 
+export default {
+    data(){
+        return{
+            dataAll:[],
+            postunit:{},
+            
+        }
+    },
+    methods: {
+        getdata(){
+            const api = `http://opendata.khcc.gov.tw/public/OD_khcc_museum.ashx?SDate=2019/06/24&EDate=2019/12/24`;
+            const vm = this;
+            vm.$http.get(api).then((response) => {
+                console.log(response.data);
+                vm.dataAll = response.data;
+                this.updata();
+            });
+        },
+        updata(){
+            let dataDie=[];
+            const vm = this;
+            const len = vm.dataAll.length;
+            console.log(vm.dataAll.length);
+            for(let i=0; i < len ;i++){
+                dataDie.push(vm.dataAll[i].MUSEUM_POSTUNIT);
+            }
+                vm.postunit = dataDie.filter(function(obj,index){
+                if(dataDie.indexOf(obj)==index){return obj}
+            });
+            console.log("整合",vm.postunit);
+        },
+    },
+    created() {
+        this.getdata();
+    },
 }
+
 </script>
 
 
