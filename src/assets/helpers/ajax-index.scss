@@ -71,6 +71,10 @@
                     .col-md-6{
                         .row{
                             .col-8{
+                                strong{
+                                    height: 50px;
+                                    overflow: hidden;
+                                }
                                 .OverScroll{
                                     overflow: hidden;
                                     height: 150px;
