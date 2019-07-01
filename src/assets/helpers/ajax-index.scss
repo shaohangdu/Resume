@@ -9,6 +9,15 @@
         padding: 200px 0;
         position: relative;
         h1{
+            @include pad{
+                font-size: 35px;
+            }
+            @include iphone7{
+                font-size: 27px;
+            }
+            @include mobile{
+                font-size: 22px;
+            }
             position: absolute;
             right: 15%;
             left:15%;
@@ -27,9 +36,19 @@
             background: rgba(255,255,255,0.7);
             border-radius:5px;
         }
+        .learn{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 20px;
+            color: white;
+        }
     }
     .ajax-conten{
         .MenuList{
+            @include pad-m{
+                float: none;
+            }
             min-width: 20%;
             float: left;
             text-align: center;
@@ -38,39 +57,39 @@
                 font-size: 30px;
                 padding: 20px;
             }
-            div{
-                margin-bottom: 10px;
-                input{
-                    width: 100%;
-                    text-align: center;
-                    line-height: 50px;
-                    border: 0;
-                    border-radius: 15px;
-                    color:white;
-                    box-shadow: 0 2px 0 #9cb8d8, 0 5px 20px rgba(0,0,0,0.3);
-                }.blue{
-                background: #4b6cd0;
-                }
-                .red{
-                    background: #f03b3b;
-                }
-                .ray{
-                    background: #bb8950;
-                }
-                .whiteBlue{
-                    background: #49a7f3;
+            .btnAdmin{
+                div{
+                    @include pad-m{
+                        @include Float(20%,10);
+                    }
+                    @include iphone7{
+                        @include Float(100%,10);
+                    }
+                    margin-bottom: 10px;
+                    input{
+                        width: 100%;
+                        text-align: center;
+                        line-height: 50px;
+                        border: 0;
+                        border-radius: 15px;
+                        color:white;
+                        box-shadow: 0 2px 0 #9cb8d8, 0 5px 20px rgba(0,0,0,0.3);
+                    }
                 }
             }
             
         }
         .article{
+            @include pad-m{
+                width: 100%;
+            }
             width: 80%;
             float: left;
             .container{
                 .row{
                     .col-md-6{
                         .row{
-                            .col-8{
+                            .col-sm-8{
                                 strong{
                                     height: 50px;
                                     overflow: hidden;

@@ -138,15 +138,15 @@
             <div class="row ">
                 <div class="col-md-4 col-12">
                     <h4 class="mt-2 pt-2 SkillBorder"> HTML , CSS 排版</h4> 
-                    <router-link to="/html"><img src="@/assets/html-title.jpg" class="img-fluid"></router-link>
+                    <router-link to="/html"><img src="@/assets/html-title.jpg" class="img-fluid border"></router-link>
                 </div>
                 <div class="col-md-4 col-12">
                     <h4 class="mt-2 pt-2 SkillBorder"> 高雄市政府JSON檔</h4> 
-                    <router-link to="/ajax"><div class="box">暫時存放</div></router-link>
+                    <router-link to="/activity"><img src="@/assets/ajax-title.jpg" class="img-fluid border"></router-link>
                 </div>
                 <div class="col-md-4 col-12">
                     <h4 class="mt-2 pt-2 SkillBorder"> Vue 電商購物網站 </h4> 
-                    <a href="#"><div class="box">暫時存放</div></a>
+                    <router-link to="/commerce"><div class="box">暫時存放</div></router-link>
                 </div>
             </div>
         </div>
