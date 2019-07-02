@@ -4,8 +4,8 @@ import HelloWorld from '@/components/HelloWorld';
 import Html from '@/components/pages/html';
 import AJAX from '@/components/pages/AJAX';
 import Commerce from '@/components/pages/commerce';
-
-
+import Login from '@/components/pages/login';
+import Products from '@/components/pages/products';
 Vue.use(Router)
 
 export default new Router({
@@ -16,7 +16,7 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/html',
+      path: '/index',
       name: 'Html',
       component: Html,
     },
@@ -26,9 +26,22 @@ export default new Router({
       component: AJAX,
     },
     {
-      path: '/commerce',
+      path: '/admin',
       name: 'Commerce',
       component: Commerce,
-    }
+      // meta: { requiresAuth: true },
+      children:[
+        {
+          path: 'products',
+          name: 'Products',
+          component: Products,
+        },
+      ]
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
+    },
   ]
 })

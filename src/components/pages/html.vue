@@ -28,7 +28,6 @@ export default {
 .wrap{
     max-width: 100%;
     font-family: "Poppins", sans-serif;
-    border:1px solid black;
 }
 a{
     text-decoration: none;
