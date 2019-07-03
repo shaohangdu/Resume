@@ -3,11 +3,25 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios);
 
-Vue.use(VueAxios, axios)
-Vue.config.productionTip = false
+import 'bootstrap';
+import './bus';
+
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
+Vue.component('Loading', Loading);
+
+import currencyFilter from './filters/currency';
+Vue.filter('currency' , currencyFilter);
+
+Vue.config.productionTip = false;
+
+// cookie設定
+axios.defaults.withCredentials = true;
 
 /* eslint-disable no-new */
 new Vue({
