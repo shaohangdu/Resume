@@ -1,14 +1,14 @@
 <template>
     <div>
-        <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
+        <nav class="navbar navbar-light bg-light shadow">
             <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
-            <input class="form-control  w-100" type="text" placeholder="Search">
-            <ul class="navbar-nav px-3">
-                <li class="nav-item text-nowrap">
-                <a class="nav-link" href="#" @click.prevent="signout" v-if="this.check ==false">登入</a>
-                <a class="nav-link" href="#" @click.prevent="signout" v-else>登出</a>
-                </li>
-            </ul>
+            <form class="form-inline">
+                <button class="btn mr-2 btnCart"><i class="fas fa-shopping-cart fa-2x"></i>
+                    <span v-if="cartNum.carts.length > 0">{{cartNum.carts.length}}</span>
+                </button>
+                <button class="btn btn-outline-success my-2 my-sm-0" @click.prevent="signout" v-if="!check">登入</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" @click.prevent="signout" v-else>登出</button>
+            </form>
         </nav>
     </div>
 </template>
@@ -16,6 +16,11 @@
 <script>
 export default {
     name:'Navbar',
+    props:{
+        cartNum:{
+            carts:[],
+        }
+    },
     data() {
         return {
             check:false,
@@ -44,10 +49,30 @@ export default {
                 vm.check = false;
             }
 		});
-    }
+    },
+    getlenght(){
+        this.$emit('getCart');
+    },
+    
   },
   created() {
       this.checkin();
   },
 }
 </script>
+
+<style lang="scss">
+.btnCart{
+    position: relative;
+    span{
+        position:absolute;
+        top:-5px;
+        right:0px;
+        color:white;
+        background-color:red;
+        font-size:10px;
+        padding:5px 10px;
+        border-radius: 50%;
+    }
+}
+</style>

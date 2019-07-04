@@ -8,7 +8,8 @@ import Login from '@/components/pages/login';       //管理登入頁面
 import Products from '@/components/pages/products'; //產品建立修改
 import Coupon from '@/components/pages/coupon';     //優待卷
 import Order from '@/components/pages/order';       //訂單頁面
-
+import Store from '@/components/pages/store';       //購買頁面設定
+import Store_content from '@/components/pages/store-content';   //購買內容
 Vue.use(Router)
 
 export default new Router({
@@ -29,9 +30,22 @@ export default new Router({
       component: AJAX,
     },
     {
+      path: '/store',
+      name: 'Store',
+      component: Store,
+      children:[
+        {
+          path: 'content',
+          name: 'Store_content',
+          component: Store_content,
+        },
+      ],
+    },
+    {
       path: '/admin',
       name: 'Commerce',
       component: Commerce,
+      meta: { requiresAuth: true },
       children:[
         {
           path: 'products',

@@ -146,7 +146,7 @@
                 </div>
                 <div class="col-md-4 col-12">
                     <h4 class="mt-2 pt-2 SkillBorder"> Vue 電商購物網站 </h4> 
-                    <router-link to="/admin/products"><div class="box">暫時存放</div></router-link>
+                    <router-link to="/store/content"><div class="box">暫時存放</div></router-link>
                 </div>
             </div>
         </div>
