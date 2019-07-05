@@ -144,7 +144,7 @@ export default {
                 httpMethod = 'put';
             }
             this.$http[httpMethod](api , { data : vm.coupon }).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             if(response.data.success){
                 $('#newCoupon').modal('hide');
                 vm.getCoupon();
@@ -160,7 +160,7 @@ export default {
             let httpMethod = 'get';
             const vm = this ;
             this.$http[httpMethod](api).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             vm.couponTotle = response.data;
             });
         },
@@ -172,7 +172,7 @@ export default {
             const vm = this ;
             let api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/coupon/${vm.coupon.id}`;
             vm.$http.delete(api).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             if(response.data.success){
                 $('#DelModal').modal('hide');
                 vm.getCoupon();

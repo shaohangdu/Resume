@@ -111,7 +111,7 @@ export default {
             const vm = this ;
             vm.isLoading = true;
             vm.$http.get(api).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             vm.order = response.data.orders;
             vm.isLoading = false;
             });
@@ -124,7 +124,7 @@ export default {
             const vm = this ;
             const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/order/${vm.TempOrder.id}`;
             vm.$http.put(api, { data : vm.TempOrder }).then((response) => {
-                console.log(response);
+                // console.log(response);
             if(response.data.success){
                 $('#exampleModal').modal('hide');
                 vm.getOrder();

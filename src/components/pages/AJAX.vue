@@ -63,7 +63,6 @@
     </div>
 </template>
 
-
 <script>
 import $ from 'jquery';
 
@@ -90,8 +89,8 @@ export default {
         getdata(){
             const api = `http://opendata.khcc.gov.tw/public/OD_khcc_museum.ashx?SDate=2019/06/24&EDate=2019/12/24`;
             const vm = this;
-            vm.$http.get(api).then((response) => {
-                console.log(response.data);
+            vm.$http.get(api , { withCredentials: true }).then((response) => {
+                // console.log(response.data);
                 vm.dataAll = response.data;
                 this.updata();
                 vm.dataSele = [];
@@ -109,14 +108,14 @@ export default {
             let dataDie=[];
             const vm = this;
             const len = vm.dataAll.length;
-            console.log(vm.dataAll.length);
+            // console.log(vm.dataAll.length);
             for(let i=0; i < len ;i++){
                 dataDie.push(vm.dataAll[i].MUSEUM_POSTUNIT);
             }
                 vm.postunit = dataDie.filter(function(obj,index){
                 if(dataDie.indexOf(obj)==index){return obj}
             });
-            console.log("整合",vm.postunit);
+            // console.log("整合",vm.postunit);
         },
         setPage: function (idx) {
             if (idx <= 0 || idx > this.totalPage) {

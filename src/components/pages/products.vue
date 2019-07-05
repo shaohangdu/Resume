@@ -184,7 +184,7 @@ export default {
             const vm = this ;
             vm.isLoading = true;
             vm.$http.get(api).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             vm.products = response.data.products;
             vm.isLoading = false;
             });
@@ -208,7 +208,7 @@ export default {
                 httpMethod = 'put';
             }
             this.$http[httpMethod](api , { data : vm.tempProduct }).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             if(response.data.success){
                 $('#productModal').modal('hide');
                 vm.getProduct();
@@ -228,7 +228,7 @@ export default {
             const vm = this ;
             let api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product/${vm.tempProduct.id}`;
             vm.$http.delete(api).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             if(response.data.success){
                 $('#delProductModal').modal('hide');
                 vm.getProduct();
@@ -240,7 +240,7 @@ export default {
             });
         },
         upload(){
-            console.log(this);
+            // console.log(this);
             const uploadedFile =  this.$refs.files.files[0];
             const vm = this;
             vm.status.fileUploading = true;
@@ -252,7 +252,7 @@ export default {
                     'Content-Type':'multipart/form-data',
                 },
             }).then((response) => {
-                console.log(response.data);
+                // console.log(response.data);
                 vm.status.fileUploading = false;
                 if (response.data.success) {
                     // 雙向綁定

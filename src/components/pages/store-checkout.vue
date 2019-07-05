@@ -49,6 +49,8 @@
                     </tr>
                 </tbody>
             </table>
+
+            
         </div>
     </div>
 </template>
@@ -66,7 +68,7 @@ export default {
             const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
             const vm = this ;
             this.$http.get(api).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             vm.cardproduct = response.data.data;
             });
         },
@@ -74,7 +76,7 @@ export default {
             const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart/${id}`;
             const vm = this ;
             this.$http.delete(api).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             vm.getCart();
             });
         },
@@ -85,7 +87,7 @@ export default {
                 code: vm.CouponCode,
             };
             this.$http.post(api , { data : coupon }).then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             this.getCart();
             });
         },

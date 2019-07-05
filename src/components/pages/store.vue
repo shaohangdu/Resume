@@ -30,7 +30,6 @@ export default {
     background-image: url(../../assets/store-title.jpg);
     background-repeat: no-repeat;
     background-position:center center;
-    
     background-size: cover;
     height:250px;
 }
