@@ -2,10 +2,8 @@
     <div>
         <nav class="navbar navbar-light bg-light shadow">
             <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
-            <form class="form-inline">
-                <button class="btn mr-2 btnCart"><i class="fas fa-shopping-cart fa-2x"></i>
-                    <span v-if="cartNum.carts.length > 0">{{cartNum.carts.length}}</span>
-                </button>
+            <router-link class="btn btn-purple ml-auto" to="/store/content"> 購物站 </router-link>
+            <form class="form-inline ml-2">
                 <button class="btn btn-outline-success my-2 my-sm-0" @click.prevent="signout" v-if="!check">登入</button>
                 <button class="btn btn-outline-success my-2 my-sm-0" @click.prevent="signout" v-else>登出</button>
             </form>
@@ -16,11 +14,6 @@
 <script>
 export default {
     name:'Navbar',
-    props:{
-        cartNum:{
-            carts:[],
-        }
-    },
     data() {
         return {
             check:false,
@@ -50,9 +43,6 @@ export default {
             }
 		});
     },
-    getlenght(){
-        this.$emit('getCart');
-    },
     
   },
   created() {
@@ -61,18 +51,3 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.btnCart{
-    position: relative;
-    span{
-        position:absolute;
-        top:-5px;
-        right:0px;
-        color:white;
-        background-color:red;
-        font-size:10px;
-        padding:5px 10px;
-        border-radius: 50%;
-    }
-}
-</style>

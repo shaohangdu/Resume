@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Navbar :cartNum="cartproduct" @theCart="getCart"></Navbar>
+        <Navbar></Navbar>
         <div class="bg-store"></div>
         
         <router-view></router-view>
@@ -16,27 +16,8 @@
 import Navbar from '@/components/Navbar';
 
 export default {
-    data() {
-        return {
-            cartproduct:[],
-        }
-    },
     components:{
         Navbar,
-    },
-    methods: {
-        getCart() {
-            const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
-            const vm = this ;
-            vm.$http.get(api).then((response) => {
-            // console.log(response.data);
-            vm.cartproduct = response.data.data;
-            console.log(vm.cartproduct);
-            });
-        },
-    },
-    created() {
-        this.getCart();
     },
 }
 </script>
