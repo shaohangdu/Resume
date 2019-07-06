@@ -1,5 +1,6 @@
 <template>
     <div>
+    <loading :active.sync="isLoading" ></loading>
         <div class="wrap" id="skills">
             <div class="ajax-header">
                 <h1> 高 雄 市 政 府 文 化 局 </h1>
@@ -7,7 +8,6 @@
                     <option disabled value="">-- 請選擇 --</option>
                     <option :value="item" v-for="(item, key) in postunit" :key="item.id">-- {{item}} --</option>
                 </select>
-                <p class="learn">學習串接使用</p>
             </div>
             <div class="ajax-conten clearfix">
                 <div class="MenuList">
@@ -30,7 +30,7 @@
                                         <p class="mb-0">{{item.MUSEUM_TOPDATE}} ~ {{item.MUSEUM_ENDDATE}}</p>
                                         <div class="mb-1 text-muted">{{item.MUSEUM_POSTUNIT }}</div>
                                         <div class="OverScroll"><p>{{item.MUSEUM_DESC }}</p></div>
-                                        <a :href="item.MUSEUM_URL">{{ item.MUSEUM_URL_Name }}</a>
+                                        <a :href="item.MUSEUM_URL" class="text-primary">{{ item.MUSEUM_URL_Name }}</a>
                                     </div>
                                     <div class="col-sm-4 col-12 d-none d-sm-block">
                                         <img :src="item.MUSEUM_IMAGE" class="img-fluid"  width="200" height="300">
@@ -74,7 +74,8 @@ export default {
             postunit:{},
             selected: '',
             countOfPage: 6,
-            currPage: 1, 
+            currPage: 1,
+            isLoading:false,
         }
     },
     computed: {
@@ -89,19 +90,21 @@ export default {
         getdata(){
             const api = `http://opendata.khcc.gov.tw/public/OD_khcc_museum.ashx?SDate=2019/06/24&EDate=2019/12/24`;
             const vm = this;
+            vm.isLoading = true;
             vm.$http.get(api , { withCredentials: false }).then((response) => {
                 // console.log(response.data);
                 vm.dataAll = response.data;
                 this.updata();
                 vm.dataSele = [];
                 for(let i=0;i<vm.dataAll.length;i++){
-                    if(vm.selected == ''){
+                    if(vm.selected === ''){
                         vm.dataSele = vm.dataAll;
-                    }else if(vm.selected == vm.dataAll[i].MUSEUM_POSTUNIT){
+                    }else if(vm.selected === vm.dataAll[i].MUSEUM_POSTUNIT){
                         vm.dataSele.push(vm.dataAll[i]);
                     }
                 }
                 vm.currPage = 1;
+                vm.isLoading = false;
             });
         },
         updata(){
@@ -113,7 +116,7 @@ export default {
                 dataDie.push(vm.dataAll[i].MUSEUM_POSTUNIT);
             }
                 vm.postunit = dataDie.filter(function(obj,index){
-                if(dataDie.indexOf(obj)==index){return obj}
+                if(dataDie.indexOf(obj)===index){return obj}
             });
             // console.log("整合",vm.postunit);
         },

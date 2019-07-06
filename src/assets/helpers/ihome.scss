@@ -1,11 +1,8 @@
 $brand-accent: #e26789;
 $progress-height: 20px;
 $brand-primary: #039dff;
-
-.box{
-    width:200px;
-    height:200px;
-    background-color:red;
+.wrap{
+  overflow: hidden;
 }
 .SkillBorder{
     border-top:10px solid #3d2714;
@@ -20,10 +17,11 @@ $brand-primary: #039dff;
     top: 0;
     bottom: 0;
     left: -10px;
-    background: black;
-    width: 1px;
+    background: white;
+    width: 5px;
     transform: translateX(-50%);
 }
+
 .timeline-pointer::after{
     content: "";
     position: absolute;
@@ -34,7 +32,7 @@ $brand-primary: #039dff;
     width: 10px;
     height: 10px;
     // transform: translateX(-50%);
-    border: 3px solid #ccc;
+    border: 5px solid orange;
     border-radius: 50%;
     z-index: 1;
 }
@@ -73,12 +71,19 @@ $brand-primary: #039dff;
   transform: rotate(-7deg);
   margin-left: -80px;
   margin-right: -80px;
-  padding: 70px 80px 40px 80px;
+  padding: 70px 80px 70px 80px;
   .section-rotate-fixed {
     transform: rotate(7deg);
   }
 }
-
 .bg-gradient1 {
-  background-image: linear-gradient(45deg, #59f0ff, $brand-primary);
+  background-image:linear-gradient(45deg, #59f0ff, $brand-primary);
+}
+
+.a_hover{
+  transition: all 1.5s; 
+  &:hover{
+    box-shadow: 5px 5px 2px gray;
+    transform:scale(1.1);
+  }
 }

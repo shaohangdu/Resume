@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="container mb-7">
+  <div class="wrap">
+    <div class="container my-7">
         <div class="text-center">
             <img src="@/assets/me.jpg" class="img-fluid rounded-circle mb-2" width="200">
             <h2 class="font-weight-bold">杜少航</h2>
@@ -15,7 +15,7 @@
     </div>
 
     <div class="container mb-7">
-        <div class="section-rotate-fixed">
+        <div>
             <h2 class="font-weight-bold m-4">網頁前端開發技能</h2>
             <div class="row">
                 <div class="col-md-4 col-12">
@@ -23,7 +23,7 @@
                     <div class="text-center"><i class="fab fa-html5 fa-5x text-primary mr-2"></i><i class="fab fa-bootstrap fa-5x text-purple"></i></div>
                     <ul>
                         <li>能夠解決瀏覽器相容性</li>
-                        <li>使用 bootstrap 4 客製化網頁</li>
+                        <li>使用 Bootstrap 4 客製化網頁</li>
                         <li>能以 SCSS 撰寫更好管理的程式碼</li>
                         <li>RWD 的 CSS 語法、技巧</li>
                     </ul>
@@ -52,106 +52,110 @@
     </div>
 
     <div class="mb-7 bg-gradient1 text-white section-rotate">
-        <div class="container section-rotate-fixed">
-            <div class="row">
-                <div class="col-md-6 col-12">
-                    <h2 class="m-b-2 font-weight-bold">
-                        學業、經歷
-                    </h2>
-                    <div class="timeline-section">
-                        <div class="row my-3 timeline-pointer">
-                            <div class="col-12">
-                                <h3> 2010年 就學 - 2014年 畢業</h3>
-                                <p> 學業 : 嘉南藥理科技大學，資訊多媒體應用系 畢業</p>
+        <div class="section-rotate-fixed">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <h2 class="m-b-2 font-weight-bold">
+                            學業、經歷
+                        </h2>
+                        <div class="timeline-section">
+                            <div class="row my-3 timeline-pointer">
+                                <div class="col-12">
+                                    <h3> 2010年 就學 - 2014年 畢業</h3>
+                                    <p> 學業 : 嘉南藥理科技大學，資訊多媒體應用系 畢業</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row my-3 timeline-pointer">
-                            <div class="col-12">
-                                <h3> 2014年 入伍 - 2019年 退役 </h3>
-                                <p> 中華民國陸軍，志願役士兵</p>
+                            <div class="row my-3 timeline-pointer">
+                                <div class="col-12">
+                                    <h3> 2014年 入伍 - 2019年 退役 </h3>
+                                    <p> 中華民國陸軍，志願役士兵</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row my-3 timeline-pointer">
-                            <div class="col-12">
-                                <h3> 2019年 退役 - 至今 </h3>
-                                <p> 待業中，並持續學習前端技術</p>
+                            <div class="row my-3 timeline-pointer">
+                                <div class="col-12">
+                                    <h3> 2019年 退役 - 至今 </h3>
+                                    <p> 待業中，並持續學習前端技術</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-12">
-                    <h2 class="text-center m-b-2 font-weight-bold">
-                                技能熟練度
-                    </h2>
-                    <section id="skills" >
-                        <div class="m-b-1">
-                            <span><span class="fab fa-html5"></span> HTML</span>
-                            <div class="progress">
-                                <div class="progress-bar" data-progress="85">
-                                    85
+                    <div class="col-md-6 col-12">
+                        <h2 class="text-center m-b-2 font-weight-bold">
+                                    技能熟練度
+                        </h2>
+                        <section id="skills" >
+                            <div class="m-b-1">
+                                <span><span class="fab fa-html5"></span> HTML </span>
+                                <div class="progress">
+                                    <div class="progress-bar" data-progress="85"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="m-b-1">
-                            <span><span class="fab fa-css3-alt"></span> CSS3</span>
-                            <div class="progress">
-                                <div class="progress-bar" data-progress="70" >
-                                    70
+                            <div class="m-b-1">
+                                <span><span class="fab fa-css3-alt"></span> CSS </span>
+                                <div class="progress">
+                                    <div class="progress-bar" data-progress="70" ></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="m-b-1">
-                            <span><span class="fab fa-js"></span> JavaScript </span>
-                            <div class="progress">
-                                <div class="progress-bar" data-progress="60" >
-                                    60
+                            <div class="m-b-1">
+                                <span><span class="fab fa-js"></span> JavaScript </span>
+                                <div class="progress">
+                                    <div class="progress-bar" data-progress="60" ></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="m-b-1">
-                            <span><span class="fab fa-git-alt"></span> Git </span>
-                            <div class="progress">
-                                <div class="progress-bar" data-progress="70" >
-                                    70
+                            <div class="m-b-1">
+                                <span><span class="fab fa-git-alt"></span> Git </span>
+                                <div class="progress">
+                                    <div class="progress-bar" data-progress="70" ></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="m-b-1">
-                            <span><span class="fab fa-vuejs"></span> Vue</span>
-                            <div class="progress">
-                                <div class="progress-bar" data-progress="50" >
-                                    50
+                            <div class="m-b-1">
+                                <span><span class="fab fa-vuejs"></span> Vue</span>
+                                <div class="progress">
+                                    <div class="progress-bar" data-progress="50" ></div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
+                            <div class="m-b-1">
+                                <span><span class="fab fa-vuejs"></span> SCSS</span>
+                                <div class="progress">
+                                    <div class="progress-bar" data-progress="60" ></div>
+                                </div>
+                            </div>
+                            <div class="m-b-1">
+                                <span><span class="fab fa-vuejs"></span> Bootstrap</span>
+                                <div class="progress">
+                                    <div class="progress-bar" data-progress="60" ></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
+        
     </div>
 
     
-
+    
     <div class="container mb-7">
         <div>
             <h2 class="font-weight-bold m-4">作品集</h2>
             <div class="row ">
                 <div class="col-md-4 col-12">
                     <h4 class="mt-2 pt-2 SkillBorder"> HTML , CSS 排版</h4> 
-                    <router-link to="/index"><img src="@/assets/html-title.jpg" class="img-fluid border"></router-link>
+                    <router-link target="_blank" to="/index"><img src="@/assets/html-title.jpg" class="img-fluid border a_hover"></router-link>
                 </div>
                 <div class="col-md-4 col-12">
                     <h4 class="mt-2 pt-2 SkillBorder"> 高雄市政府JSON檔</h4> 
-                    <router-link to="/activity"><img src="@/assets/ajax-title.jpg" class="img-fluid border"></router-link>
+                    <router-link target="_blank" to="/activity"><img src="@/assets/ajax-title.jpg" class="img-fluid border a_hover"></router-link>
                 </div>
                 <div class="col-md-4 col-12">
                     <h4 class="mt-2 pt-2 SkillBorder"> Vue 電商購物網站 </h4> 
-                    <router-link to="/store/content"><div class="box">暫時存放</div></router-link>
+                    <router-link target="_blank" to="/store/content"><img src="@/assets/store.jpg" class="img-fluid border a_hover"></router-link>
                 </div>
             </div>
         </div>
     </div>
-
   </div>
 </template>
 
@@ -182,18 +186,16 @@ export default {
                     });
                 }
             });
-
       },
   },
   created() {
       this.progress();
   },
 }
-
-        
 </script>
 
 
-<style lang="scss" >
+<style lang="scss" scoped>
 @import '../assets/helpers/ihome.scss';
+
 </style>

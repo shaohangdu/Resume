@@ -5,7 +5,7 @@
             <button class="btn" @click="tablechange=!tablechange"><i class="fas fa-shopping-cart fa-2x"></i></button>
             <span class="num">{{cartNum.carts.length}}</span>
             <div class="goshopping">
-                <table class="border bg-light" v-if="tablechange==true">
+                <table class="border bg-light" v-if="tablechange===true">
                     <thead class="bg-primary text-white">
                         <th width="100">商品</th>
                         <th width="40" >數量</th>
@@ -118,9 +118,9 @@ export default {
                 vm.products= response.data.products;
                 vm.product = [];
                 for(let i=0;i<vm.products.length;i++){
-                    if(vm.selected == ''){
+                    if(vm.selected === ''){
                         vm.product = vm.products;
-                    }else if(vm.selected == vm.products[i].MUSEUM_POSTUNIT){
+                    }else if(vm.selected === vm.products[i].MUSEUM_POSTUNIT){
                         vm.product.push(vm.products[i]);
                     }
                 }
@@ -171,7 +171,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .btnCart{
     position: relative;
     position: fixed;

@@ -176,7 +176,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @media(max-width:768px){
     /* .m-none{
         display: none;
