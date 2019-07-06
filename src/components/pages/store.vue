@@ -1,12 +1,12 @@
 <template>
     <div>
         <Navbar></Navbar>
-        <div class="bg-store"></div>
+        <div class="bg-store" id="skills"></div>
         
         <router-view></router-view>
 
         <div class="store-footer">
-            <div> 古 早 味 柑 仔 店 (學習接後端api使用)</div>
+            <div> 古 早 味 柑 仔 店 (學習接api使用)</div>
         </div>
     </div>
 </template>

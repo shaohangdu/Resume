@@ -1,99 +1,110 @@
 <template>
     <div>
-        <div class="container my-4">
-            <table class="table mt-4">
-                <thead>
-                    <th width="100">分類</th>
-                    <th>產品名稱</th>
-                    <th width="70">數量</th>
-                    <th width="100">單價</th>
-                    <th width="100">總價錢</th>
-                    <th width="120">刪除</th>
-                </thead>
-                <tfoot> 
-                    <tr>
-                        <td colspan="4" class="text-right">總計</td>
-                        <td class="text-right">{{ cardproduct.total | currency}}</td>
-                        <td></td>
-                    </tr> 
-                    <tr v-if="cardproduct.final_total !== cardproduct.total">
-                        <td colspan="4" class="text-right">折扣價</td>
-                        <td class="text-right">{{ cardproduct.final_total | currency}}</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="輸入優惠碼  12 打九折" 
-                                v-model="CouponCode">
-                                <div class="input-group-append">
-                                    <button class="input-group-text" @click="addCouponCode">優惠碼</button>
-                                </div>
-                            </div>
-                        </td>
-                        <td></td>
-                    </tr>
-                </tfoot> 
-                <tbody>
-                    <tr v-for="(item, key) in cardproduct.carts" :key="item.id">
-                        <td>{{ item.product.category }}</td>
-                        <td>{{ item.product.title }}
-                        <div class="text-danger" v-if="item.coupon">已套用優惠卷</div>
-                        </td>
-                        <td class="text-right">{{ item.qty }}</td>
-                        <td class="text-right">{{ item.product.price | currency}}</td>
-                        <td class="text-right">{{ item.total | currency}}</td>
-                        <td>
-                        <button class="btn btn-outline-secondary btn-sm" @click="DelCart(item.id)">取消訂單</button>
-                        </td>
-                    </tr>
-                </tbody>
+    <loading :active.sync="isLoading" ></loading>
+    <div class="my-5 row justify-content-center">
+        <form class="col-md-6" @submit.prevent="payorder">
+            <table class="table">
+            <thead>
+                <th>品名</th>
+                <th>數量</th>
+                <th>單價</th>
+            </thead>
+            <tbody>
+                <tr v-for="item in order.products" :key="item.id">
+                <td class="align-middle">{{ item.product.title }}</td>
+                <td class="align-middle">{{ item.qty }}/{{ item.product.unit }}</td>
+                <td class="align-middle text-right">{{ item.final_total | currency}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                <td colspan="2" class="text-right">總計</td>
+                <td class="text-right">{{ order.total | currency}}</td>
+                </tr>
+            </tfoot>
             </table>
 
+            <table class="table">
+            <tbody>
+                <tr>
+                <th width="100">Email</th>
+                <td>{{ order.user.email }}</td>
+                </tr>
+                <tr>
+                <th>姓名</th>
+                <td>{{ order.user.name }}</td>
+                </tr>
+                <tr>
+                <th>收件人電話</th>
+                <td>{{ order.user.tel }}</td>
+                </tr>
+                <tr>
+                <th>收件人地址</th>
+                <td>{{ order.user.address }}</td>
+                </tr>
+                <tr>
+                <th>付款狀態</th>
+                <td>
+                    <span v-if="!order.is_paid">尚未付款</span>
+                    <span v-else class="text-success">付款完成</span>
+                </td>
+                </tr>
+            </tbody>
+            </table>
+            <div class="d-flex">
+                <router-link v-if="order.is_paid === false" class="btn btn-secondary" to="/store/content"> 取消訂單 </router-link>
+                <router-link v-else class="btn btn-secondary" to="/store/content"> 前往購物 </router-link>
+                <div class="ml-auto" v-if="order.is_paid === false">
+                    <button class="btn btn-danger">確認付款去</button>
+                </div>
+            </div>
             
+        </form>
         </div>
     </div>
 </template>
 
+
 <script>
 export default {
-    data() {
-        return {
-            cardproduct:{},
-            CouponCode:'',
+    data () {
+        return{
+            order:{
+                user:{
+                    email:'',
+                },
+            },
+            orderId:'',
+            isLoading:false,
         }
     },
     methods: {
-        getCart() {
-            const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
+        getorder() {
             const vm = this ;
+            const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/order/${vm.orderId}`;
             this.$http.get(api).then((response) => {
             // console.log(response.data);
-            vm.cardproduct = response.data.data;
+            vm.order = response.data.order;
             });
         },
-        DelCart(id) {
-            const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart/${id}`;
+        payorder(){
             const vm = this ;
-            this.$http.delete(api).then((response) => {
+            const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/pay/${vm.orderId}`;
+            vm.isLoading = true;
+            this.$http.post(api).then((response) => {
             // console.log(response.data);
-            vm.getCart();
+            if(response.data.success){
+                this.getorder();
+                vm.isLoading = false;
+            }
             });
-        },
-        addCouponCode() {
-            const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/coupon`;
-            const vm = this ;
-            const coupon = {
-                code: vm.CouponCode,
-            };
-            this.$http.post(api , { data : coupon }).then((response) => {
-            // console.log(response.data);
-            this.getCart();
-            });
-        },
+        }
     },
     created() {
-        this.getCart();
+        this.orderId = this.$route.params.orderId;
+        this.getorder();
+        // console.log(this.orderId);
+        
     },
 }
 </script>

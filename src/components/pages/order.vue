@@ -21,7 +21,7 @@
                     </td>
                     <td>{{item.total | currency}}</td>
                     <td v-if="item.is_paid" class="text-secondary">已付清</td>
-                    <td v-else class="text-danger">未</td>
+                    <td v-else class="text-danger">未付款</td>
                     <td>
                         <button class="btn btn-outline-danger btn-sm" @click="openModal(item)">編輯</button>
                     </td>

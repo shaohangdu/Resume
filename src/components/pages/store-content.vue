@@ -1,5 +1,6 @@
 <template>
     <div>
+        <loading :active.sync="isLoading" ></loading>
         <div class="mr-2 btnCart" v-if="cartNum.carts.length > 0">
             <button class="btn" @click="tablechange=!tablechange"><i class="fas fa-shopping-cart fa-2x"></i></button>
             <span class="num">{{cartNum.carts.length}}</span>
@@ -26,7 +27,7 @@
                             <td>合計 <span class="text-danger">{{cartNum.total}}</span></td>
                             <td colspan="3" class="text-right">
                                 <div>
-                                    <router-link class="btn btn-purple" to="/store/checkout"> 前往結帳 </router-link>
+                                    <router-link class="btn btn-purple" to="/store/user"> 前往結帳 </router-link>
                                 </div>
                             </td>
                         </tr>
@@ -36,14 +37,16 @@
         </div>
         <div class="container my-4">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 mb-2" v-for="(item , key) in products" :key="item.id">
+                <div class="col-12 col-sm-6 col-md-4 mb-2" v-for="(item , key) in product.slice(pageStart, pageStart + countOfPage)" :key="item.id">
                     <div class="card h-100">
                         <img :src="item.imageUrl" class="card-img-top">
-                        <div class="card-body">
-                            <span class="badge badge-secondary float-right ml-2">{{ item.category }}</span>
-                            <h5 class="card-title">{{item.title}}</h5>
-                            <p class="card-text">{{item.content}}</p>
-                            <div class="h6">只要<span class="text-danger h5"> {{ item.price }} </span>元</div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <span class="badge badge-secondary float-right ml-2">{{ item.category }}</span>
+                                <h5 class="card-title">{{item.title}}</h5>
+                                <p class="card-text">{{item.content}}</p>
+                                <div class="h6">只要<span class="text-danger h5"> {{ item.price }} </span>元</div>
+                            </div>
                             <div class="d-flex  d-sm-block">
                                 <div class="mt-2">
                                     <select name="" class="form-control" v-model="item.num">
@@ -61,8 +64,23 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
+
+            <div class="d-flex justify-content-center my-2">
+                <ul class="pagination">
+                    <li class="page-item" v-bind:class="{'disabled': (currPage === 1)}" @click.prevent="setPage(currPage-1)">
+                        <a class="page-link" href="#">上一頁</a>
+                    </li>
+                    <li class="page-item" v-for="n in totalPage" v-bind:class="{'active': (currPage === (n))}" @click.prevent="setPage(n)">
+                        <a class="page-link" href="#">{{n}}</a>
+                    </li>
+                    <li class="page-item" v-bind:class="{'disabled': (currPage === totalPage)}" @click.prevent="setPage(currPage+1)">
+                        <a class="page-link" href="#">下一頁</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+
     </div>
 </template>
 
@@ -72,19 +90,40 @@ export default {
     data() {
         return {
             products:[],
+            product:[],
             cartNum:{
                 carts:[],
             },
             tablechange:false,
+            isLoading:false,
+            countOfPage: 6,
+            currPage: 1, 
+        }
+    },
+    computed: {
+        pageStart: function () {
+        return (this.currPage - 1) * this.countOfPage;
+        },
+        totalPage: function () {
+        return Math.ceil(this.product.length / this.countOfPage);
         }
     },
     methods: {
         getproduct(page = 1){
             const vm = this;
             let api=`${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products?page=${page}`;
+            vm.isLoading = true;
             this.$http.get(api).then((response) => {
                 // console.log(response);
                 vm.products= response.data.products;
+                vm.product = [];
+                for(let i=0;i<vm.products.length;i++){
+                    if(vm.selected == ''){
+                        vm.product = vm.products;
+                    }else if(vm.selected == vm.products[i].MUSEUM_POSTUNIT){
+                        vm.product.push(vm.products[i]);
+                    }
+                }
             });
         },
         upcart(id , qty = 1){
@@ -102,9 +141,11 @@ export default {
         getCart() {
             const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
             const vm = this ;
+            vm.isLoading = true;
             vm.$http.get(api).then((response) => {
             // console.log(response.data);
             vm.cartNum = response.data.data;
+            vm.isLoading = false;
             // console.log(vm.cartNum);
             });
         },
@@ -115,6 +156,12 @@ export default {
                 // console.log(response);
                 this.getCart();
             });
+        },
+        setPage: function (idx) {
+            if (idx <= 0 || idx > this.totalPage) {
+                return;
+            }
+            this.currPage = idx;
         },
     },
     created() {

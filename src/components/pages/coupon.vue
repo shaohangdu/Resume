@@ -1,5 +1,6 @@
 <template>
     <div>
+        <loading :active.sync="isLoading" ></loading>
         <div class="text-right mt-4">
             <button class="btn btn-outline-primary" @click="openModal(true)">建立新優惠卷</button>        
         </div>
@@ -159,9 +160,11 @@ export default {
             let api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/coupons?page=${page}`;
             let httpMethod = 'get';
             const vm = this ;
+            vm.isLoading = true;
             this.$http[httpMethod](api).then((response) => {
             // console.log(response.data);
             vm.couponTotle = response.data;
+            vm.isLoading = false;
             });
         },
         DelModal(item) {

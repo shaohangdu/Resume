@@ -18,6 +18,12 @@ Vue.component('Loading', Loading);
 import currencyFilter from './filters/currency';
 Vue.filter('currency' , currencyFilter);
 
+import VeeValidate from 'vee-validate';
+Vue.use(VeeValidate);
+// 啟用 VeeValidate 中文語系
+import zhTWValidate from 'vee-validate/dist/locale/zh_TW';
+VeeValidate.Validator.localize('zh_TW' , zhTWValidate);
+
 Vue.config.productionTip = false;
 
 // cookie設定

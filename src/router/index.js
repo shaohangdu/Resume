@@ -10,7 +10,8 @@ import Coupon from '@/components/pages/coupon';     //優待卷
 import Order from '@/components/pages/order';       //訂單頁面
 import Store from '@/components/pages/store';       //購買頁面設定
 import Store_content from '@/components/pages/store-content';   //購買內容
-import Checkout from '@/components/pages/store-checkout';   //購買內容
+import Store_user from '@/components/pages/store-user';   //購買人
+import Store_checkout from '@/components/pages/store-checkout';   //購買資訊
 Vue.use(Router)
 
 export default new Router({
@@ -41,10 +42,15 @@ export default new Router({
           component: Store_content,
         },
         {
-          path: 'checkout',
-          name: 'Checkout',
-          component: Checkout,
+          path: 'user',
+          name: 'Store_user',
+          component: Store_user,
         },
+        {
+          path: 'checkout/:orderId',
+          name: 'Store_checkout',
+          component: Store_checkout,
+        }
       ],
     },
     {

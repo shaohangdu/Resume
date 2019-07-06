@@ -12,6 +12,7 @@
     </label>
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <router-link class="btn btn-purple btn-block" to="/store/content"> 返回購物站 </router-link>
 			<p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
 		</form>
   </div>

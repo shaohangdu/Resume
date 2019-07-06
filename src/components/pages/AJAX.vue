@@ -89,7 +89,7 @@ export default {
         getdata(){
             const api = `http://opendata.khcc.gov.tw/public/OD_khcc_museum.ashx?SDate=2019/06/24&EDate=2019/12/24`;
             const vm = this;
-            vm.$http.get(api , { withCredentials: true }).then((response) => {
+            vm.$http.get(api , { withCredentials: false }).then((response) => {
                 // console.log(response.data);
                 vm.dataAll = response.data;
                 this.updata();
