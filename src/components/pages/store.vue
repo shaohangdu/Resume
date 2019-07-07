@@ -6,7 +6,7 @@
         <router-view></router-view>
 
         <div class="store-footer">
-            <div> 古 早 味 柑 仔 店 (學習接api使用)</div>
+            <div> 古 早 味 柑 仔 店 (學習接api使用) © 2019 shaohang du</div>
         </div>
     </div>
 </template>

@@ -1,7 +1,23 @@
 <template>
     <div>
         <loading :active.sync="isLoading" ></loading>
-        
+        <div class="container text-center my-5 p-0">
+            <div class="form-row text-center">
+                <div class="col-12 col-sm">
+                    <div class="alert alert-primary alert-rounded mb-0">1.輸入個人資料</div>
+                </div>
+                <i class="fas fa-arrow-right fa-2x my-auto d-none d-sm-block"></i>
+                <i class="fas fa-arrow-down fa-2x mx-auto d-sm-none"></i>
+                <div class="col-12 col-sm">
+                    <div class="alert alert-dark alert-rounded mb-0">2.金流付款</div>
+                </div>
+                <i class="fas fa-arrow-right fa-2x my-auto d-none d-sm-block"></i>
+                <i class="fas fa-arrow-down fa-2x mx-auto d-sm-none"></i>
+                <div class="col-12 col-sm">
+                    <div class="alert alert-dark alert-rounded mb-0">3.完成</div>
+                </div>
+            </div>
+        </div>
         <div class="container p-0 CardOver">
             <table class="table mt-4">
                 <thead>

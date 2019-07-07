@@ -132,15 +132,12 @@
                 </div>
             </div>
         </div>
-        
     </div>
 
-    
-    
     <div class="container mb-7">
         <div>
             <h2 class="font-weight-bold m-4">作品集</h2>
-            <div class="row ">
+            <div class="row">
                 <div class="col-md-4 col-12">
                     <h4 class="mt-2 pt-2 SkillBorder"> HTML , CSS 排版</h4> 
                     <router-link target="_blank" to="/index"><img src="@/assets/html-title.jpg" class="img-fluid border a_hover"></router-link>
@@ -155,6 +152,11 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="text-center bg-dark text-white p-2">
+        <div>個人履歷 © 2019 shaohang du</div>
+        
     </div>
   </div>
 </template>

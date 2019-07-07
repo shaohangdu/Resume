@@ -1,6 +1,23 @@
 <template>
     <div>
     <loading :active.sync="isLoading" ></loading>
+    <div class="container text-center my-5 p-0">
+            <div class="form-row text-center">
+                <div class="col-12 col-sm">
+                    <div class="alert alert-dark alert-rounded mb-0">1.輸入個人資料</div>
+                </div>
+                <i class="fas fa-arrow-right fa-2x my-auto d-none d-sm-block"></i>
+                <i class="fas fa-arrow-down fa-2x mx-auto d-sm-none"></i>
+                <div class="col-12 col-sm">
+                    <div class="alert alert-rounded mb-0" :class="{'alert-primary': !order.is_paid, 'alert-dark': order.is_paid}">2.金流付款</div>
+                </div>
+                <i class="fas fa-arrow-right fa-2x my-auto d-none d-sm-block"></i>
+                <i class="fas fa-arrow-down fa-2x mx-auto d-sm-none"></i>
+                <div class="col-12 col-sm">
+                    <div class="alert alert-rounded mb-0" :class="{'alert-dark': !order.is_paid, 'alert-primary': order.is_paid}">3.完成</div>
+                </div>
+            </div>
+        </div>
     <div class="my-5 row justify-content-center">
         <form class="col-md-6" @submit.prevent="payorder">
             <table class="table">
@@ -53,7 +70,7 @@
             </table>
             <div class="d-flex">
                 <router-link v-if="order.is_paid === false" class="btn btn-secondary" to="/store/content"> 取消訂單 </router-link>
-                <router-link v-else class="btn btn-secondary" to="/store/content"> 前往購物 </router-link>
+                <router-link v-else class="btn btn-primary" to="/store/content"> 前往購物 </router-link>
                 <div class="ml-auto" v-if="order.is_paid === false">
                     <button class="btn btn-danger">確認付款去</button>
                 </div>

@@ -10,6 +10,10 @@
                 </main>
             </div>
         </div>
+
+        <div class="store-footer">
+            <div> 古 早 味 柑 仔 店 (學習接api使用) © 2019 shaohang du</div>
+        </div>
     </div>
 </template>
 
@@ -26,3 +30,14 @@ export default {
 }
 </script>
 
+<style lang="scss">
+.store-footer{
+        margin: 0 auto;
+        padding: 20px;
+        background: black;
+        text-align: center;
+        line-height: 40px;
+        padding-top: 10px;
+        color: white;
+    }
+</style>

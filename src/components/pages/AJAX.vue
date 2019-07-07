@@ -21,18 +21,18 @@
                     </div>
                 </div>
                 <div class="article">
-                    <div class="container">
+                    <div class="container content-wary">
                         <div class="row">
                             <div class="col-md-6 col-12 my-2" v-for="(item, key) in dataSele.slice(pageStart, pageStart + countOfPage)" :key="item.id">
-                                <div class="row no-gutters border rounded shadow-sm h-md-250 position-relative">
-                                    <div class="col-sm-8 col-12 p-4 d-flex flex-column">
-                                        <strong class="d-inline-block mb-2 text-primary">{{ item.MUSEUM_TITLE}}</strong>
+                                <div class="row no-gutters border rounded shadow-sm h-md-250 p-3 h-100">
+                                    <div class="col-sm-7 col-12 d-flex flex-column">
+                                        <strong class="d-inline-block mb-1 text-primary">{{ item.MUSEUM_TITLE}}</strong>
                                         <p class="mb-0">{{item.MUSEUM_TOPDATE}} ~ {{item.MUSEUM_ENDDATE}}</p>
                                         <div class="mb-1 text-muted">{{item.MUSEUM_POSTUNIT }}</div>
-                                        <div class="OverScroll"><p>{{item.MUSEUM_DESC }}</p></div>
+                                        <div class="OverScroll mb-2"><p>{{item.MUSEUM_DESC }}</p></div>
                                         <a :href="item.MUSEUM_URL" class="text-primary">{{ item.MUSEUM_URL_Name }}</a>
                                     </div>
-                                    <div class="col-sm-4 col-12 d-none d-sm-block">
+                                    <div class="col-sm-5 d-none d-sm-block text-center">
                                         <img :src="item.MUSEUM_IMAGE" class="img-fluid"  width="200" height="300">
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="ajax-footer">
-                <div> 高 雄 藝 術 (學習串接AJAX使用)</div>
+                <div> 高 雄 藝 術 (學習串接AJAX使用)  © 2019 shaohang du</div>
                 <div>資料來源: 高 雄 市 政 府 </div>
             </div>
         </div>

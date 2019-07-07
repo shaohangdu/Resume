@@ -52,10 +52,11 @@
             min-width: 20%;
             float: left;
             text-align: center;
-            padding: 20px;
+
             h2{
                 font-size: 30px;
                 padding: 20px;
+                margin: 0px;
             }
             .btnAdmin{
                 div{
@@ -85,18 +86,31 @@
             }
             width: 80%;
             float: left;
-            .container{
+            .content-wary{
+                @include pad-m{
+                    max-width: 960px;
+                }
                 .row{
                     .col-md-6{
                         .row{
-                            .col-sm-8{
+                            div{
                                 strong{
                                     height: 50px;
                                     overflow: hidden;
                                 }
+                                .text-muted{
+                                    font-size: 13px
+                                }
                                 .OverScroll{
+                                    @include pad{
+                                        -webkit-line-clamp: 5;
+                                    }
                                     overflow: hidden;
-                                    height: 150px;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 4;
+                                    -webkit-box-orient: vertical;
+                                    font-size: 13px;
                                     // scrollbar 樣式修改
                                     &::-webkit-scrollbar{
                                         width: 10px;
@@ -109,6 +123,14 @@
                                     &:hover{
                                         overflow-y: scroll;
                                     }
+                                }
+                                a{
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 1;
+                                    -webkit-box-orient: vertical;
                                 }
                             }
                         }

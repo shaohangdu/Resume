@@ -38,9 +38,10 @@
         <div class="container my-4">
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-4 mb-2" v-for="(item , key) in product.slice(pageStart, pageStart + countOfPage)" :key="item.id">
-                    <div class="card h-100">
-                        <img :src="item.imageUrl" class="card-img-top">
-                        <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="card h-100 ProductImg">
+                        <diV class="cartRibbon" v-show="item.is_enabled">熱賣</div>
+                        <img :src="item.imageUrl" style="height:200px;" class="card-img-top">
+                        <div class="card-body d-flex flex-column justify-content-end">
                             <div>
                                 <span class="badge badge-secondary float-right ml-2">{{ item.category }}</span>
                                 <h5 class="card-title">{{item.title}}</h5>
@@ -197,7 +198,29 @@ export default {
         }
     }
 }
-    
+
+    .ProductImg{
+        overflow: hidden;
+        position:relative;
+        .cartRibbon{
+            position: absolute;
+            top: 10px;
+            right:-20px;
+            transform: rotate(45deg);
+            padding:0 30px;
+            background-color:red;
+            font-weight:bold;
+            z-index:3;
+        }
+        img{
+            transition: all 1.5s;
+            &:hover{
+                transform:scale(1.2);
+            }
+        }
+    }
+
+
 
 
 </style>
