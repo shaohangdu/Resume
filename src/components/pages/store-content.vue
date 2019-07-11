@@ -1,6 +1,10 @@
 <template>
     <div>
         <loading :active.sync="isLoading" ></loading>
+        <div class="MarqBor">
+            <marquee onMouseOver="this.stop()" onMouseOut="this.start()">商品網站製作中，持續改進</marquee>
+        </div>
+        
         <div class="mr-2 btnCart" v-if="cartNum.carts.length > 0">
             <button class="btn" @click="tablechange=!tablechange"><i class="fas fa-shopping-cart fa-2x"></i></button>
             <span class="num">{{cartNum.carts.length}}</span>
@@ -35,53 +39,108 @@
                 </table>
             </div>
         </div>
-        <div class="container my-4">
+        
+        <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 mb-2" v-for="(item , key) in product.slice(pageStart, pageStart + countOfPage)" :key="item.id">
-                    <div class="card h-100 ProductImg">
-                        <diV class="cartRibbon" v-show="item.is_enabled">熱賣</div>
-                        <img :src="item.imageUrl" style="height:200px;" class="card-img-top">
-                        <div class="card-body d-flex flex-column justify-content-end">
-                            <div>
-                                <span class="badge badge-secondary float-right ml-2">{{ item.category }}</span>
-                                <h5 class="card-title">{{item.title}}</h5>
-                                <p class="card-text">{{item.content}}</p>
-                                <div class="h6">只要<span class="text-danger h5"> {{ item.price }} </span>元</div>
-                            </div>
-                            <div class="d-flex  d-sm-block">
-                                <div class="mt-2">
-                                    <select name="" class="form-control" v-model="item.num">
-                                        <option :value="num" v-for="num in 10" :key="num">
-                                            選購 {{num}} {{item.unit}}
-                                        </option>
-                                    </select>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="">
+                        <nav class="nav nav-tabs">
+                            <a class="nav-item nav-link active" id="nav-home-tab"  data-toggle="tab" href="#nav-home" >熱賣商品</a>
+                            <a class="nav-item nav-link" id="nav-profile-tab"  data-toggle="tab" href="#nav-profile">飲料精選</a>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" aria-labelledby="nav-home-tab">
+                                <div class="border p-2" v-for="item in product" :key="item" v-if="item.num < 4">
+                                     <div class="text-right text-Tangerine h4 font-italic">No {{item.num}}</div>
+                                     <img :src="item.imageUrl" style="height:150px;" class="card-img-top">
+                                     <div class="h5">{{item.title}}</div>
+                                     <div class="h5 text-Tangerine">{{ item.price | currency}}</div>
                                 </div>
-                                <div class="ml-auto mt-2">
-                                    <button type="button" class="btn btn-outline-danger w-100" @click="upcart(item.id , item.num)">
-                                        加到購物車
-                                    </button>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" aria-labelledby="nav-profile-tab">
+                                <div class="border p-2" v-for="item in product" :key="item" v-if="item.category == '飲料'">
+                                     <img :src="item.imageUrl" style="height:150px;" class="card-img-top">
+                                     <div class="h5">{{item.title}}</div>
+                                     <div class="h5 text-Tangerine">{{ item.price | currency}}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="col-lg-9 col-12">
+                    <div id="carouselExampleIndicators" class="carousel slide mb-4" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img src="../../assets/img/bt_1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="../../assets/img/bt_2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="../../assets/img/bt_3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4 mb-2" v-for="(item , key) in product.slice(pageStart, pageStart + countOfPage)" :key="item.id">
+                            <div class="card h-100 ProductImg">
+                                <diV class="cartRibbon" v-show="item.is_enabled">熱賣</div>
+                                <img :src="item.imageUrl" style="height:200px;" class="card-img-top">
+                                <div class="card-body d-flex flex-column justify-content-end">
+                                    <div>
+                                        <span class="badge badge-secondary float-right ml-2">{{ item.category }}</span>
+                                        <h5 class="card-title">{{item.title}}</h5>
+                                        <p class="card-text">{{item.content}}</p>
+                                        <div class="h6">只要<span class="text-danger h5"> {{ item.price }} </span>元</div>
+                                    </div>
+                                    <div class="d-flex  d-sm-block">
+                                        <div class="mt-2">
+                                            <select name="" class="form-control" v-model="item.num">
+                                                <option :value="num" v-for="num in 10" :key="num">
+                                                    選購 {{num}} {{item.unit}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="ml-auto mt-2">
+                                            <button type="button" class="btn btn-outline-danger w-100" @click="upcart(item.id , item.num)">
+                                                加到購物車
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="d-flex justify-content-center my-2">
-                <ul class="pagination">
-                    <li class="page-item" v-bind:class="{'disabled': (currPage === 1)}" @click.prevent="setPage(currPage-1)">
-                        <a class="page-link" href="#">上一頁</a>
-                    </li>
-                    <li class="page-item" v-for="n in totalPage" v-bind:class="{'active': (currPage === (n))}" @click.prevent="setPage(n)">
-                        <a class="page-link" href="#">{{n}}</a>
-                    </li>
-                    <li class="page-item" v-bind:class="{'disabled': (currPage === totalPage)}" @click.prevent="setPage(currPage+1)">
-                        <a class="page-link" href="#">下一頁</a>
-                    </li>
-                </ul>
+                    <div class="d-flex justify-content-center my-2">
+                        <ul class="pagination">
+                            <li class="page-item" v-bind:class="{'disabled': (currPage === 1)}" @click.prevent="setPage(currPage-1)">
+                                <a class="page-link" href="#">上一頁</a>
+                            </li>
+                            <li class="page-item" v-for="n in totalPage" v-bind:class="{'active': (currPage === (n))}" @click.prevent="setPage(n)">
+                                <a class="page-link" href="#">{{n}}</a>
+                            </li>
+                            <li class="page-item" v-bind:class="{'disabled': (currPage === totalPage)}" @click.prevent="setPage(currPage+1)">
+                                <a class="page-link" href="#">下一頁</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -173,6 +232,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.MarqBor{
+    padding:5px;
+    border-top:1px dashed black;
+    border-bottom:1px dashed black;
+    margin-bottom:20px;
+    marquee{
+        font-size:20px;
+    }
+}
+
 .btnCart{
     position: relative;
     position: fixed;
@@ -205,11 +274,12 @@ export default {
         .cartRibbon{
             position: absolute;
             top: 10px;
-            right:-20px;
+            right:-23px;
             transform: rotate(45deg);
             padding:0 30px;
             background-color:red;
             font-weight:bold;
+            color:white;
             z-index:3;
         }
         img{
@@ -217,6 +287,17 @@ export default {
             &:hover{
                 transform:scale(1.2);
             }
+        }
+    }
+
+    .nav-tabs{
+        border-bottom:5px solid orange;
+        .active{
+            border:2px solid orange;
+            font-weight: bold ;
+        }
+        a{
+            color: black;
         }
     }
 

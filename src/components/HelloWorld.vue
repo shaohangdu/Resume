@@ -10,13 +10,13 @@
             </div>
             <a href="#" class="text-dark ">shaohangdu@gmail.com</a>
             <p class="mt-2"> Tel: 0983830081 </p>
-            <p class="mt-2">自我介紹:剛退伍半年，經過朋友介紹，便開始了學習前端技術的旅程</p>
+            <p class="mt-2">自我介紹: 退伍過後，透過朋友介紹了解到前端這份行業，經過深思熟慮、決心投入，便開始了學習前端技術的旅程</p>
         </div>
     </div>
 
     <div class="container mb-7">
         <div>
-            <h2 class="font-weight-bold m-4">網頁前端開發技能</h2>
+            <h3 class="font-weight-bold m-4">網頁前端開發技能</h3>
             <div class="row">
                 <div class="col-md-4 col-12">
                     <h4 class="ml-4 pt-2 SkillBorder "> HTML , CSS</h4> 
@@ -62,19 +62,19 @@
                         <div class="timeline-section">
                             <div class="row my-3 timeline-pointer">
                                 <div class="col-12">
-                                    <h3> 2010年 就學 - 2014年 畢業</h3>
-                                    <p> 學業 : 嘉南藥理科技大學，資訊多媒體應用系 畢業</p>
+                                    <h3> 2010年 - 2014年</h3>
+                                    <p>嘉南藥理科技大學，資訊多媒體應用系</p>
                                 </div>
                             </div>
                             <div class="row my-3 timeline-pointer">
                                 <div class="col-12">
-                                    <h3> 2014年 入伍 - 2019年 退役 </h3>
+                                    <h3> 2014年 - 2019年</h3>
                                     <p> 中華民國陸軍，志願役士兵</p>
                                 </div>
                             </div>
                             <div class="row my-3 timeline-pointer">
                                 <div class="col-12">
-                                    <h3> 2019年 退役 - 至今 </h3>
+                                    <h3> 2019年 退役 ~</h3>
                                     <p> 待業中，並持續學習前端技術</p>
                                 </div>
                             </div>
@@ -85,44 +85,44 @@
                                     技能熟練度
                         </h2>
                         <section id="skills" >
-                            <div class="m-b-1">
-                                <span><span class="fab fa-html5"></span> HTML </span>
+                            <div class="mb-2">
+                                <span class="skillText"><span class="fab fa-html5"></span> HTML </span>
                                 <div class="progress">
                                     <div class="progress-bar" data-progress="85"></div>
                                 </div>
                             </div>
-                            <div class="m-b-1">
-                                <span><span class="fab fa-css3-alt"></span> CSS </span>
+                            <div class="mb-2">
+                                <span class="skillText"><span class="fab fa-css3-alt"></span> CSS </span>
                                 <div class="progress">
                                     <div class="progress-bar" data-progress="70" ></div>
                                 </div>
                             </div>
-                            <div class="m-b-1">
-                                <span><span class="fab fa-js"></span> JavaScript </span>
+                            <div class="mb-2">
+                                <span class="skillText"><span class="fab fa-js"></span> JavaScript </span>
                                 <div class="progress">
                                     <div class="progress-bar" data-progress="60" ></div>
                                 </div>
                             </div>
-                            <div class="m-b-1">
-                                <span><span class="fab fa-git-alt"></span> Git </span>
+                            <div class="mb-2">
+                                <span class="skillText"><span class="fab fa-git-alt"></span> Git </span>
                                 <div class="progress">
                                     <div class="progress-bar" data-progress="70" ></div>
                                 </div>
                             </div>
-                            <div class="m-b-1">
-                                <span><span class="fab fa-vuejs"></span> Vue</span>
+                            <div class="mb-2">
+                                <span class="skillText"><span class="fab fa-vuejs"></span> Vue</span>
                                 <div class="progress">
                                     <div class="progress-bar" data-progress="50" ></div>
                                 </div>
                             </div>
-                            <div class="m-b-1">
-                                <span><span class="fab fa-vuejs"></span> SCSS</span>
+                            <div class="mb-2">
+                                <span class="skillText"><span class="fab fa-sass"></span> SCSS</span>
                                 <div class="progress">
                                     <div class="progress-bar" data-progress="60" ></div>
                                 </div>
                             </div>
-                            <div class="m-b-1">
-                                <span><span class="fab fa-vuejs"></span> Bootstrap</span>
+                            <div class="mb-2">
+                                <span class="skillText"><span class="fab fa-bootstrap"></span> Bootstrap</span>
                                 <div class="progress">
                                     <div class="progress-bar" data-progress="60" ></div>
                                 </div>

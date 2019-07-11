@@ -92,7 +92,7 @@ export default {
             const vm = this;
             vm.isLoading = true;
             vm.$http.get(api , { withCredentials: false }).then((response) => {
-                // console.log(response.data);
+                console.log(response.data);
                 vm.dataAll = response.data;
                 this.updata();
                 vm.dataSele = [];

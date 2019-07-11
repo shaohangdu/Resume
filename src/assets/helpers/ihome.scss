@@ -79,10 +79,15 @@ $brand-primary: #039dff;
 .bg-gradient1 {
   background-image:linear-gradient(45deg, #59f0ff, $brand-primary);
 }
-.a_hover{
-  transition: all 1.5s;
+.a_hover,.progress{
+  transition: all 0.8s;
   &:hover{
     box-shadow: 5px 5px 2px gray;
-    transform:scale(1.1);
+    transform:scale(1.05);
   }
+}
+
+.skillText{
+  letter-spacing: 2px;
+  font-size: 18px;
 }

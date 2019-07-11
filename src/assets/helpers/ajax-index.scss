@@ -18,9 +18,9 @@
             @include mobile{
                 font-size: 22px;
             }
+            margin: 0 auto;
+            width: 100%;
             position: absolute;
-            right: 15%;
-            left:15%;
             top:15%;
             color: white;
             font-size: 45px;
@@ -62,10 +62,12 @@
                 div{
                     @include pad-m{
                         @include Float(20%,10);
+                        margin-left: 0px;
                     }
                     @include iphone7{
                         @include Float(100%,10);
                     }
+                    margin-left: 10%;
                     margin-bottom: 10px;
                     input{
                         width: 100%;
@@ -106,6 +108,7 @@
                                         -webkit-line-clamp: 5;
                                     }
                                     overflow: hidden;
+                                    height: 150px;
                                     text-overflow: ellipsis;
                                     display: -webkit-box;
                                     -webkit-line-clamp: 4;

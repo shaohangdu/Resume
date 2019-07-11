@@ -24,11 +24,6 @@
         height: 70px;
         line-height: 70px;
         z-index: 3;
-        @include pad-m{
-            .open{
-                transform: translateX(0px);
-            }
-        }
         h1{
             width: 74px;
             float: left;
@@ -72,7 +67,7 @@
         .menu{
             border-right: 1px solid #ebebeb;
             @include pad-m{
-                position: fixed;
+                position: absolute;
                 top: 0;
                 bottom: 0;
                 left: 0;
@@ -99,9 +94,12 @@
                     }
                 }
                 .Dropdown{
+                    @include pad-m{
+                        position: relative;
+                    }
                     &:hover{
                         ul{
-                            opacity: 1;
+                            display: block;
                             max-height: 300px;
                         }
                     }
@@ -109,15 +107,17 @@
                         line-height: 20px;
                         padding: 10px;
                         position: absolute;
-                        opacity: 0;
+                        display: none;
                         max-height: 0px;
                         transition:  all 0.5s;
                         border: 1px solid white;
                         background: white;
+                        @include pad-m{
+                            top:0px;
+                            left: 100px;
+                            width: 150px;
+                        }
                         li{
-                            @include pad-m{
-                                position: relative;
-                            }
                             float: none;
                             height: 25px;
                             color: black;                    
@@ -125,10 +125,13 @@
                     }
                 }
                 .megamenu-item{
+                    @include pad-m{
+                        position: relative;
+                    }
                     &:hover{
                         .megamenu{
                             ul{
-                                opacity: 1;
+                                display: block;
                                 max-height: 300px;
                             }
                         }
@@ -141,11 +144,27 @@
                         left: 0;
                         right: 0;
                         background: white;
+                        @include pad-m{
+                            top: 0px;
+                            left: 100px;
+                            width: 320px;
+                        }
+                        @include mobile{
+                            top: -185px;
+                            width: 200px;
+                        }
                         ul{
-                            opacity: 0;
+                            display: none;
                             max-height: 0px;
                             border-right:1px solid rgba(0,0,0,0.2);
                             @include Float(24.66666%,0%);
+                            @include pad-m{
+                                @include Float(50%,0%);
+                                border-bottom: 1px solid black;
+                            }
+                            @include mobile{
+                                @include Float(100%,0%);
+                            }
                             li{
                                 height: 25px;
                                 padding-left: 25px;
@@ -153,6 +172,11 @@
                         }
                     }
                 }
+            }
+        }
+        @include pad-m{
+            .open{
+                transform: translateX(0px);
             }
         }
         .showmenu{
