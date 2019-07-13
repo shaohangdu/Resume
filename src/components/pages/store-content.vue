@@ -4,7 +4,22 @@
         <div class="MarqBor">
             <marquee onMouseOver="this.stop()" onMouseOut="this.start()">商品網站製作中，持續改進</marquee>
         </div>
-        
+        <section>
+            <div class="set">
+                <div><img src="../../assets/img/store-1.png"></div>
+                <div><img src="../../assets/img/store-2.png"></div>
+                <div><img src="../../assets/img/store-3.jpg"></div>
+                <div><img src="../../assets/img/store-4.jpg"></div>
+                <div><img src="../../assets/img/store-5.png"></div>
+            </div>
+            <div class="set set3">
+                <div><img src="../../assets/img/store-3.jpg"></div>
+                <div><img src="../../assets/img/store-1.png"></div>
+                <div><img src="../../assets/img/store-2.png"></div>
+                <div><img src="../../assets/img/store-5.png"></div>
+                <div><img src="../../assets/img/store-4.jpg"></div>
+            </div>
+        </section> 
         <div class="mr-2 btnCart" v-if="cartNum.carts.length > 0">
             <button class="btn" @click="tablechange=!tablechange"><i class="fas fa-shopping-cart fa-2x"></i></button>
             <span class="num">{{cartNum.carts.length}}</span>
@@ -43,10 +58,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 d-none d-lg-block">
-                    <div class="">
+                    <div class="bg-white">
                         <nav class="nav nav-tabs">
                             <a class="nav-item nav-link active" id="nav-home-tab"  data-toggle="tab" href="#nav-home" >熱賣商品</a>
-                            <a class="nav-item nav-link" id="nav-profile-tab"  data-toggle="tab" href="#nav-profile">飲料精選</a>
+                            <a class="nav-item nav-link " id="nav-profile-tab"  data-toggle="tab" href="#nav-profile">飲料精選</a>
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-home" aria-labelledby="nav-home-tab">
@@ -268,40 +283,111 @@ export default {
     }
 }
 
-    .ProductImg{
-        overflow: hidden;
-        position:relative;
-        .cartRibbon{
-            position: absolute;
-            top: 10px;
-            right:-23px;
-            transform: rotate(45deg);
-            padding:0 30px;
-            background-color:red;
-            font-weight:bold;
-            color:white;
-            z-index:3;
+.ProductImg{
+    overflow: hidden;
+    position:relative;
+    .cartRibbon{
+        position: absolute;
+        top: 10px;
+        right:-23px;
+        transform: rotate(45deg);
+        padding:0 30px;
+        background-color:red;
+        font-weight:bold;
+        color:white;
+        z-index:3;
+    }
+    img{
+        transition: all 1.5s;
+        &:hover{
+            transform:scale(1.2);
         }
-        img{
-            transition: all 1.5s;
-            &:hover{
-                transform:scale(1.2);
+    }
+}
+
+.nav-tabs{
+    border-bottom:5px solid orange;
+    .active{
+        border:2px solid orange;
+        font-weight: bold ;
+    }
+    a{
+        color: black;
+    }
+}
+
+section{
+    position: absolute;
+    width: 100%;
+    height:150vh;
+    overflow:hidden;
+    .set{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0px;
+        transform:scale(0.8);
+        div{
+            position:absolute;
+            display:block;
+            z-index:-2;
+            &:nth-child(1){
+                left:10%;
+                animation: animate 15s linear infinite;
+            }
+            &:nth-child(2){
+                left:0%;
+                animation: animate 20s linear infinite;
+                animation-delay: -12s;
+            }
+            &:nth-child(3){
+                left:50%;
+                animation: animate 7s linear infinite;
+            }
+            &:nth-child(4){
+                left:92%;
+                animation: animate 12s linear infinite;
+                animation-delay: -5s;
+            }
+            &:nth-child(5){
+                right:0%;
+                animation: animate 17s linear infinite;
             }
         }
     }
-
-    .nav-tabs{
-        border-bottom:5px solid orange;
-        .active{
-            border:2px solid orange;
-            font-weight: bold ;
-        }
-        a{
-            color: black;
-        }
+    .set3{
+        transform:scale(0.8) rotateZ(180deg);
+        filter:blur(6px);
     }
-
-
+}
+@keyframes animate{
+    0%{
+        opacity:0;
+        top:-10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    20%{
+        opacity:0.5;
+        transform: translateX(-20px) rotate(45deg);
+    }
+    40%{
+        opacity:0;
+        transform: translateX(20px) rotate(90deg);
+    }
+    60%{
+        opacity:0.5;
+        transform: translateX(-20px) rotate(135deg);
+    }
+    80%{
+        opacity:0;
+        transform: translateX(20px) rotate(180deg);
+    }
+    100%{
+        opacity:0.5;
+        top:120%;
+         transform: translateX(-20px) rotate(225deg);
+    }
+}
 
 
 </style>

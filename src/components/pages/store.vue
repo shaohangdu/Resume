@@ -2,7 +2,6 @@
     <div>
         <Navbar></Navbar>
         <div class="bg-store" id="skills"></div>
-        
         <router-view></router-view>
 
         <div class="store-footer">
@@ -34,12 +33,13 @@ export default {
     height:250px;
 }
 .store-footer{
-        margin: 0 auto;
-        padding: 20px;
-        background: black;
-        text-align: center;
-        line-height: 40px;
-        padding-top: 10px;
-        color: white;
-    }
+    margin: 0 auto;
+    padding: 20px;
+    background: black;
+    text-align: center;
+    line-height: 40px;
+    padding-top: 10px;
+    color: white;
+}
+
 </style>
