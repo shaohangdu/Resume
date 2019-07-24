@@ -274,9 +274,6 @@
                         background: black;
                         color: white;
                     }
-                    .nonoe{
-                        display: none;
-                    }
                     .blue{
                         background: #4b6cd0;
                     }
@@ -296,6 +293,39 @@
                     opacity: 1;
                     a{
                         opacity: 0.5;
+                    }
+                    i{
+                        position: relative;
+                        transition: all 0.8s;
+                        i{
+                            position: absolute;
+                            display: block;
+                            top: 0px;
+                            left: 0px;
+                            z-index: 2;
+                        }
+                        &:nth-child(4):hover{
+                            background: #ed3974;
+                            transform: rotate(180deg);
+                            i{
+                                &:nth-child(1){
+                                    transform: rotate(180deg);
+                                    left: 40px;
+                                }
+                                &:nth-child(2){
+                                    transform: rotate(180deg);
+                                    left: 80px;
+                                }
+                                &:nth-child(3){
+                                    transform: rotate(180deg);
+                                    left: 120px;
+                                }
+                                &:nth-child(4){
+                                    transform: rotate(180deg);
+                                    left: 160px;
+                                }
+                            }
+                        }
                     }
                 }
             }

@@ -47,11 +47,12 @@
                             <a href=""><i class="fas fa-eye"></i>34</a>
                             <a href=""><i class="fas fa-thumbs-up"></i>84</a>
                             <a href=""><i class="fas fa-comments"></i>14</a>
-                            <i class="fas fa-share-alt box"></i>
-                            <i class="fab fa-facebook-f box blue nonoe"></i>
-                            <i class="fab fa-google-plus-g box red nonoe"></i>
-                            <i class="fab fa-instagram box ray nonoe"></i>
-                            <i class="fab fa-twitter box whiteBlue nonoe"></i>
+                            <i class="fas fa-share-alt box">
+                                <i class="fab fa-facebook-f box blue "></i>
+                                <i class="fab fa-google-plus-g box red "></i>
+                                <i class="fab fa-instagram box ray "></i>
+                                <i class="fab fa-twitter box whiteBlue "></i>
+                            </i>
                         </p>
                     </div>
                     <div>
@@ -185,11 +186,12 @@
                             <a href=""><i class="fas fa-eye"></i>34</a>
                             <a href=""><i class="fas fa-thumbs-up"></i>84</a>
                             <a href=""><i class="fas fa-comments"></i>14</a>
-                            <i class="fas fa-share-alt box"></i>
-                            <i class="fab fa-facebook-f box blue nonoe"></i>
-                            <i class="fab fa-google-plus-g box red nonoe"></i>
-                            <i class="fab fa-instagram box ray nonoe"></i>
-                            <i class="fab fa-twitter box whiteBlue nonoe"></i>
+                            <i class="fas fa-share-alt box">
+                                <i class="fab fa-facebook-f box blue "></i>
+                                <i class="fab fa-google-plus-g box red "></i>
+                                <i class="fab fa-instagram box ray "></i>
+                                <i class="fab fa-twitter box whiteBlue "></i>
+                            </i>
                         </p>
                     </div>
                     <div class="featur-data">
@@ -210,11 +212,12 @@
                             <a href=""><i class="fas fa-eye"></i>34</a>
                             <a href=""><i class="fas fa-thumbs-up"></i>84</a>
                             <a href=""><i class="fas fa-comments"></i>14</a>
-                            <i class="fas fa-share-alt box"></i>
-                            <i class="fab fa-facebook-f box blue nonoe"></i>
-                            <i class="fab fa-google-plus-g box red nonoe"></i>
-                            <i class="fab fa-instagram box ray nonoe"></i>
-                            <i class="fab fa-twitter box whiteBlue nonoe"></i>
+                            <i class="fas fa-share-alt box">
+                                <i class="fab fa-facebook-f box blue"></i>
+                                <i class="fab fa-google-plus-g box red"></i>
+                                <i class="fab fa-instagram box ray"></i>
+                                <i class="fab fa-twitter box whiteBlue"></i>
+                            </i>
                         </p>
                     </div>
                 </div>
@@ -322,7 +325,7 @@
                             <img src="../assets/img/7.jpg" alt="">
                         </div>
                         <div class="blog-content">
-                            <a href="#">Choose The Perfect Accommodations</a>
+                            <a href="#">Choose The Perfect Accommo</a>
                             <p>
                                 <a href=""><i class="fas fa-eye"></i>34</a>
                                 <a href=""><i class="fas fa-thumbs-up"></i>84</a>
@@ -367,7 +370,7 @@
                             <img src="../assets/img/10.jpg" alt="">
                         </div>
                         <div class="blog-content">
-                            <a href="#">Choose The Perfect Accommodations</a>
+                            <a href="#">Choose The Perfect Accommo</a>
                             <p>
                                 <a href=""><i class="fas fa-eye"></i>34</a>
                                 <a href=""><i class="fas fa-thumbs-up"></i>84</a>
@@ -497,7 +500,6 @@
 
 <script>
 export default {
-    
 }
 </script>
 

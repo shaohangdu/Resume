@@ -60,21 +60,21 @@
                 <div class="col-lg-3 d-none d-lg-block">
                     <div class="bg-white">
                         <nav class="nav nav-tabs">
-                            <a class="nav-item nav-link active" id="nav-home-tab"  data-toggle="tab" href="#nav-home" >熱賣商品</a>
+                            <a class="nav-item nav-link mr-2 active" id="nav-home-tab"  data-toggle="tab" href="#nav-home" >熱賣商品</a>
                             <a class="nav-item nav-link " id="nav-profile-tab"  data-toggle="tab" href="#nav-profile">飲料精選</a>
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-home" aria-labelledby="nav-home-tab">
-                                <div class="border p-2" v-for="item in product" :key="item" v-if="item.num < 4">
+                                <div class="border p-2" v-for="item in product" :key="item.id" v-if="item.num < 4">
                                      <div class="text-right text-Tangerine h4 font-italic">No {{item.num}}</div>
-                                     <img :src="item.imageUrl" style="height:150px;" class="card-img-top">
+                                     <img :src="item.imageUrl" style="height:150px;" class="card-img-top" :title="item.title">
                                      <div class="h5">{{item.title}}</div>
                                      <div class="h5 text-Tangerine">{{ item.price | currency}}</div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="nav-profile" aria-labelledby="nav-profile-tab">
-                                <div class="border p-2" v-for="item in product" :key="item" v-if="item.category == '飲料'">
-                                     <img :src="item.imageUrl" style="height:150px;" class="card-img-top">
+                                <div class="border p-2" v-for="item in product" :key="item.id" v-if="item.category == '飲料'">
+                                     <img :src="item.imageUrl" style="height:150px;" class="card-img-top" :title="item.title">
                                      <div class="h5">{{item.title}}</div>
                                      <div class="h5 text-Tangerine">{{ item.price | currency}}</div>
                                 </div>
@@ -90,14 +90,14 @@
                             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                         </ol>
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                            <img src="../../assets/img/bt_1.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-item active" title="特賣大出清">
+                                <img src="../../assets/img/bt_1.jpg" class="d-block w-100" alt="">
                             </div>
-                            <div class="carousel-item">
-                            <img src="../../assets/img/bt_2.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-item" title="特賣大出清">
+                                <img src="../../assets/img/bt_2.jpg" class="d-block w-100" alt="">
                             </div>
-                            <div class="carousel-item">
-                            <img src="../../assets/img/bt_3.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-item" title="特賣大出清">
+                                <img src="../../assets/img/bt_3.jpg" class="d-block w-100" alt="">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -113,7 +113,7 @@
                         <div class="col-12 col-md-6 col-lg-4 mb-2" v-for="(item , key) in product.slice(pageStart, pageStart + countOfPage)" :key="item.id">
                             <div class="card h-100 ProductImg">
                                 <diV class="cartRibbon" v-show="item.is_enabled">熱賣</div>
-                                <img :src="item.imageUrl" style="height:200px;" class="card-img-top">
+                                <img :src="item.imageUrl" style="height:200px;" class="card-img-top" :title="item.title">
                                 <div class="card-body d-flex flex-column justify-content-end">
                                     <div>
                                         <span class="badge badge-secondary float-right ml-2">{{ item.category }}</span>

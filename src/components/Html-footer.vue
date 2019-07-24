@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="AtLast ">
-                <p>Copyright ©2019 All rights reserved | This template is made with by Colorlib  is used for practice html.css.</p>
+                <p>Copyright ©2019 All rights reserved | This template is made with by shaohang du is used for practice html.css.</p>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Privacy</a></li>

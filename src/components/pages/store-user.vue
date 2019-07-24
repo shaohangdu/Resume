@@ -145,9 +145,13 @@ export default {
             vm.isLoading = true;
             this.$http.get(api).then((response) => {
             console.log(response.data);
+            if(response.data.data.carts.length ===0){
+                vm.$router.push('/store/content');
+            }else{
+                vm.cardproduct = response.data.data;
+                vm.isLoading = false;
+            }
             
-            vm.cardproduct = response.data.data;
-            vm.isLoading = false;
             });
         },
         DelCart(id) {

@@ -1,8 +1,9 @@
 <template>
     <div>
     <loading :active.sync="isLoading" ></loading>
-        <div class="wrap" id="skills">
-            <div class="ajax-header">
+        <div class="wrap" >
+            <div class="uptop"><button @click="uptop()"><i class="fas fa-arrow-alt-circle-up fa-3x"></i></button></div>
+            <div class="ajax-header" id="skills">
                 <h1> 高 雄 市 政 府 文 化 局 </h1>
                 <select class="selectClass" v-model="selected" @click="getdata()">
                     <option disabled value="">-- 請選擇 --</option>
@@ -88,7 +89,7 @@ export default {
     },
     methods: {
         getdata(){
-            const api = `http://opendata.khcc.gov.tw/public/OD_khcc_museum.ashx?SDate=2019/06/24&EDate=2019/12/24`;
+            const api = `https://script.google.com/macros/s/AKfycby2MzZPQkw_dWXzt7-A4WtlK9rCbNZYx-XEwKwF7yoJlOK04EqQ/exec`;
             const vm = this;
             vm.isLoading = true;
             vm.$http.get(api , { withCredentials: false }).then((response) => {
@@ -126,9 +127,24 @@ export default {
             }
             this.currPage = idx;
         },
+        upscroll(){
+            $(window).scroll(function(){   
+                //從Window整個網頁取得現在滾動Y值
+                let scrollPos = $(window).scrollTop();
+                if(scrollPos > 250){
+                    $('.uptop').addClass('open');
+                }else{
+                    $('.uptop').removeClass('open');
+                }
+            });
+        },
+        uptop(){
+            $('html,body').animate({scrollTop:0},1000);
+        }
     },
     created() {
         this.getdata();
+        this.upscroll();
     },
 }
 

@@ -140,15 +140,16 @@
             <div class="row">
                 <div class="col-md-4 col-12">
                     <h4 class="mt-2 pt-2 SkillBorder"> HTML , CSS 排版</h4> 
-                    <router-link target="_blank" to="/index"><img src="@/assets/html-title.jpg" class="img-fluid border a_hover"></router-link>
+                    <router-link target="_blank" to="/index"><img src="@/assets/html-title.jpg" class="img-fluid border a_hover mb-2"></router-link>
+                    <a target="_blank" href="https://shaohangdu.github.io/text/"><img src="@/assets/html-2.jpg" class="img-fluid border a_hover"></a>
                 </div>
                 <div class="col-md-4 col-12">
                     <h4 class="mt-2 pt-2 SkillBorder"> 高雄市政府JSON檔</h4> 
-                    <router-link target="_blank" to="/activity"><img src="@/assets/ajax-title.jpg" class="img-fluid border a_hover"></router-link>
+                    <router-link target="_blank" to="/activity"><img src="@/assets/ajax-title.jpg" class="img-fluid border a_hover mb-2"></router-link>
                 </div>
                 <div class="col-md-4 col-12">
                     <h4 class="mt-2 pt-2 SkillBorder"> Vue 電商購物網站 </h4> 
-                    <router-link target="_blank" to="/store/content"><img src="@/assets/store.jpg" class="img-fluid border a_hover"></router-link>
+                    <router-link target="_blank" to="/store/content"><img src="@/assets/store.jpg" class="img-fluid border a_hover mb-2"></router-link>
                 </div>
             </div>
         </div>
@@ -179,8 +180,8 @@ export default {
                 let windowHeight = $(window).height();//取得網頁高度 
                 //進度條progress bor
                 let SkillTop = $('#skills').position().top;
-                // console.log(SkillTop);
-                if(SkillTop<=(scrollPos + windowHeight /2) && !showSkill){ //當技能熟練度在網頁中間時執行
+                console.log(SkillTop);
+                if(SkillTop<=(scrollPos + windowHeight /2) && !showSkill){
                     showSkill =true;
                     $('#skills .progress-bar').each(function(){
                     let thisValue = $(this).data('progress');

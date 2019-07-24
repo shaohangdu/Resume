@@ -45,7 +45,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .wrap{
-  background: radial-gradient(#333, #000);
+  background: radial-gradient(#696969, #000000);
   height:100vh;
 }
 .form-signin {

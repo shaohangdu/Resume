@@ -2,6 +2,21 @@
 
 .wrap{
     margin: 0 auto;
+    .uptop{
+        position: fixed;
+        bottom:40px;
+        right: 20px;
+        z-index: 12;
+        display: none;
+        button{
+            padding: 1px;
+            border-radius: 50%;
+            border: 0;
+        }
+    }
+    .open{
+        display: block;
+    }
     .ajax-header{
         text-align: center;
         background-position: center;
@@ -136,6 +151,15 @@
                                     -webkit-box-orient: vertical;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+            .pagination{
+                li{
+                    a{
+                        @include mobile{
+                            font-size: 12px;
                         }
                     }
                 }

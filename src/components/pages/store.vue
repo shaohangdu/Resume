@@ -6,6 +6,7 @@
 
         <div class="store-footer">
             <div> 古 早 味 柑 仔 店 (學習接api使用) © 2019 shaohang du</div>
+            <div>您在本站已停留：<span>{{ hour }} 時 {{ minute }} 分 {{ second }} 秒 </span></div>
         </div>
     </div>
 </template>
@@ -15,8 +16,33 @@
 import Navbar from '@/components/Navbar';
 
 export default {
+    data() {
+        return {
+            second: 0,
+            minute: 0,
+            hour: 0,
+        }
+    },
     components:{
         Navbar,
+    },
+    methods: {
+        timeInterval(){
+            let vm = this;
+            vm.second++;
+            if(vm.second==60) { 
+                vm.second=0;
+                vm.minute+=1; 
+            };
+            if(vm.minute==60) { 
+                vm.minute=0;
+                vm.hour+=1; 
+            };
+            window.setTimeout(vm.timeInterval,1000); 
+        }
+    },
+    created() {
+        this.timeInterval();
     },
 }
 </script>
