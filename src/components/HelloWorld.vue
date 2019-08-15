@@ -199,6 +199,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import '../assets/helpers/ihome.scss';
+@import './ihome.scss';
 
 </style>
