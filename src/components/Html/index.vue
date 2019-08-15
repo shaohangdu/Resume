@@ -1,30 +1,30 @@
 <template>
     <div>
         <div class="wrap">
-            <Htmlheader/>
+            <Header/>
             <div id="skills"></div>
-            <HtmlConten/>
+            <Conten/>
             
-            <Htmlfooter/>
+            <Footer/>
         </div>
     </div>
 </template>
 
 <script>
-import Htmlheader from '@/components/Html-Header';
-import HtmlConten from '@/components/Html-Conten';
-import Htmlfooter from '@/components/Html-footer';
+import Header from './header/index';
+import Conten from './conten/index';
+import Footer from './footer/index';
 export default {
     components:{
-        Htmlheader,
-        HtmlConten,
-        Htmlfooter,
+        Header,
+        Conten,
+        Footer,
     }
 }
 </script>
 
 <style lang="scss">
-@import "../../assets/helpers/Html-Index";
+@import "./Html-Index";
 .wrap{
     max-width: 100%;
     font-family: "Poppins", sans-serif;

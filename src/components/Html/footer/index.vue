@@ -3,7 +3,7 @@
          <div class="html-footer clearfix">
             <div class="component clearfix">
                 <div class="logo">
-                    <img src="../assets/img/logo2.png" alt="">
+                    <img src="../../../assets/img/logo2.png" alt="">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.</p>
                     <div>
@@ -33,7 +33,7 @@
                     <h3>SPORT VIDEOS</h3>
                     <div class="blog">
                         <div>
-                            <img src="../assets/img/12.jpg" alt="">
+                            <img src="../../../assets/img/12.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#">Take A Romantic Break In A Boutique Hotel</a>
@@ -47,7 +47,7 @@
                     <hr>
                     <div class="blog">
                         <div>
-                            <img src="../assets/img/13.jpg" alt="">
+                            <img src="../../../assets/img/13.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#">Take A Romantic Break In A Boutique Hotel</a>
@@ -100,6 +100,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/helpers/reast";
+@import '../../../assets/helpers/reast';
 </style>
 

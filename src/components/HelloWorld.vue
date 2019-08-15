@@ -88,7 +88,7 @@
                             <div class="mb-2">
                                 <span class="skillText"><span class="fab fa-html5"></span> HTML </span>
                                 <div class="progress">
-                                    <div class="progress-bar" data-progress="85"></div>
+                                    <div class="progress-bar" data-progress="70"></div>
                                 </div>
                             </div>
                             <div class="mb-2">

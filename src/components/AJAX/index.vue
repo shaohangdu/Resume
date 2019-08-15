@@ -153,7 +153,7 @@ export default {
 
 <style lang="scss" scoped>
 
-@import 'src/assets/helpers/ajax-index.scss';
+@import './ajax-index.scss';
 .wrap{
     .ajax-header{
         background-image: url(../../assets/img/annie-spratt-gJ3EpFlw_ss-unsplash.jpg);

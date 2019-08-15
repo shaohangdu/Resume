@@ -13,7 +13,7 @@
 
 <script>
 
-import Navbar from '@/components/Navbar';
+import Navbar from '../Navbar';
 
 export default {
     data() {
@@ -49,10 +49,10 @@ export default {
 
 <style lang="scss" scoped>
 
-@import "../../assets/helpers/ipad";
+@import "../../../assets/helpers/ipad";
 
 .bg-store{
-    background-image: url(../../assets/store-title.jpg);
+    background-image: url(../../../assets/store-title.jpg);
     background-repeat: no-repeat;
     background-position:center center;
     background-size: cover;

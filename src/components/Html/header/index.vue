@@ -111,12 +111,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/helpers/reast";
+@import '../../../assets/helpers/reast';
 .html-header{
-    background-image: url(../assets/img/2.jpg);
+    background-image: url(../../../assets/img/2.jpg);
     .nav-header{
         h1{
-            background-image: url(../assets/img/logo.png);
+            background-image: url(../../../assets/img/logo.png);
         }
     }
 }

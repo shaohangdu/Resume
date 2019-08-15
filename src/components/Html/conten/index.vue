@@ -30,7 +30,7 @@
                 </div>
                 <div class="featur">
                     <div class="featur-data">
-                        <img src="../assets/img/22.jpg" alt="">
+                        <img src="../../../assets/img/22.jpg" alt="">
                         <div class="Overview">
                             <div>
                                 <a href=""> MAY 8 2018</a>
@@ -60,7 +60,7 @@
                             <h2>MOST POPULAR</h2>
                             <li>
                                 <div>
-                                    <img src="../assets/img/23.jpg" alt="">
+                                    <img src="../../../assets/img/23.jpg" alt="">
                                 </div>
                                 <div class="blog-content">
                                     <a href="#">Global Resorts Network Grn Putting Timeshares To Shame</a>
@@ -73,7 +73,7 @@
                             </li>
                             <li>
                                 <div>
-                                    <img src="../assets/img/24.jpg" alt="">
+                                    <img src="../../../assets/img/24.jpg" alt="">
                                 </div>
                                 <div class="blog-content">
                                     <a href="#">A Guide To Rocky Mountain Vacations</a>
@@ -86,7 +86,7 @@
                             </li>
                             <li>
                                 <div>
-                                    <img src="../assets/img/25.jpg" alt="">
+                                    <img src="../../../assets/img/25.jpg" alt="">
                                 </div>
                                 <div class="blog-content">
                                     <a href="#">American Standards And European Culture How To Avoid</a>
@@ -99,7 +99,7 @@
                             </li>
                             <li>
                                 <div>
-                                    <img src="../assets/img/26.jpg" alt="">
+                                    <img src="../../../assets/img/26.jpg" alt="">
                                 </div>
                                 <div class="blog-content">
                                     <a href="#">Mother Earth Hosts Our Travels</a>
@@ -112,7 +112,7 @@
                             </li>
                             <li>
                                 <div>
-                                    <img src="../assets/img/27.jpg" alt="">
+                                    <img src="../../../assets/img/27.jpg" alt="">
                                 </div>
                                 <div class="blog-content">
                                     <a href="#">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
@@ -134,7 +134,7 @@
                 <div class="MostViewd clearfix">
                     <ul>
                         <li>
-                            <img src="../assets/img/28.jpg" alt="">
+                            <img src="../../../assets/img/28.jpg" alt="">
                             <h3>
                                 <a href="">A Closer Look At Our Front Porch Items From Lowe’s</a>
                             </h3>
@@ -143,7 +143,7 @@
                             <a href=""><i class="fas fa-comments"></i>14</a>
                         </li>
                         <li>
-                            <img src="../assets/img/29.jpg" alt="">
+                            <img src="../../../assets/img/29.jpg" alt="">
                             <h3>
                                 <a href="">Dentists Are Smiling Over Painless Veneer Alternative</a>
                             </h3>
@@ -152,7 +152,7 @@
                             <a href=""><i class="fas fa-comments"></i>14</a>
                         </li>
                         <li>
-                            <img src="../assets/img/30.jpg" alt="">
+                            <img src="../../../assets/img/30.jpg" alt="">
                             <h3>
                                 <a href="">Become A Travel Pro In One Easy Lesson</a>
                             </h3>
@@ -169,7 +169,7 @@
                 </div>
                 <div class="featur">
                     <div class="featur-data">
-                        <img src="../assets/img/22.jpg" alt="">
+                        <img src="../../../assets/img/22.jpg" alt="">
                         <div class="Overview">
                             <div>
                                 <a href=""> MAY 8 2018</a>
@@ -195,7 +195,7 @@
                         </p>
                     </div>
                     <div class="featur-data">
-                        <img src="../assets/img/22.jpg" alt="">
+                        <img src="../../../assets/img/22.jpg" alt="">
                         <div class="Overview">
                             <div>
                                 <a href=""> MAY 8 2018</a>
@@ -225,7 +225,7 @@
                     <ul>
                         <li>
                             <div>
-                                <img src="../assets/img/31.jpg" alt="">
+                                <img src="../../../assets/img/31.jpg" alt="">
                             </div>
                             <div class="blog-content">
                                 <a href="#">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
@@ -238,7 +238,7 @@
                         </li>
                         <li>
                             <div>
-                                <img src="../assets/img/32.jpg" alt="">
+                                <img src="../../../assets/img/32.jpg" alt="">
                             </div>
                             <div class="blog-content ">
                                 <a href="#">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
@@ -251,7 +251,7 @@
                         </li>
                         <li>
                             <div>
-                                <img src="../assets/img/33.jpg" alt="">
+                                <img src="../../../assets/img/33.jpg" alt="">
                             </div>
                             <div class="blog-content">
                                 <a href="#">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
@@ -264,7 +264,7 @@
                         </li>
                         <li>
                             <div>
-                                <img src="../assets/img/34.jpg" alt="">
+                                <img src="../../../assets/img/34.jpg" alt="">
                             </div>
                             <div class="blog-content">
                                 <a href="#">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
@@ -283,7 +283,7 @@
                     <h2>MOST POPULAR</h2>
                     <li>
                         <div>
-                            <img src="../assets/img/4.jpg" alt="">
+                            <img src="../../../assets/img/4.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#">Global Travel And Vacations Luxury Travel</a>
@@ -296,7 +296,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="../assets/img/5.jpg" alt="">
+                            <img src="../../../assets/img/5.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#">Cruising Destination Ideas</a>
@@ -309,7 +309,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="../assets/img/6.jpg" alt="">
+                            <img src="../../../assets/img/6.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#">The Luxury Of Traveling With</a>
@@ -322,7 +322,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="../assets/img/7.jpg" alt="">
+                            <img src="../../../assets/img/7.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#">Choose The Perfect Accommo</a>
@@ -335,7 +335,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="../assets/img/8.jpg" alt="">
+                            <img src="../../../assets/img/8.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#">A Guide To Rocky Mountain Vacations</a>
@@ -348,13 +348,13 @@
                     </li>
                 </ul>
                 <div class="leftImg">
-                    <img src="../assets/img/add.png" alt="">
+                    <img src="../../../assets/img/add.png" alt="">
                 </div>
                 <ul>
                     <h2>Latest Videos</h2>
                     <li>
                         <div>
-                            <img src="../assets/img/9.jpg" alt="">
+                            <img src="../../../assets/img/9.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#">Coventry City Guide Including Coventry</a>
@@ -367,7 +367,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="../assets/img/10.jpg" alt="">
+                            <img src="../../../assets/img/10.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#">Choose The Perfect Accommo</a>
@@ -380,7 +380,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="../assets/img/11.jpg" alt="">
+                            <img src="../../../assets/img/11.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#">Get Ready Fast For Fall Leaf Viewing</a>
@@ -393,7 +393,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="../assets/img/12.jpg" alt="">
+                            <img src="../../../assets/img/12.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#">Global Resorts Network Grn Putting</a>
@@ -406,7 +406,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="../assets/img/13.jpg" alt="">
+                            <img src="../../../assets/img/13.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <a href="#">Travel Prudently Luggage And Carry</a>
@@ -437,13 +437,13 @@
                     <li><a href="#"><i class="fas fa-angle-double-right"></i>TV Show<span>13</span></a></li>
                 </ul>
                 <div class="leftImg">
-                    <img src="../assets/img/add2.png" alt="">
+                    <img src="../../../assets/img/add2.png" alt="">
                 </div>
                 <ul>
                     <h2>HOT CHANNELS</h2>
                     <li>
                         <div>
-                            <img src="../assets/img/14.jpg" alt="">
+                            <img src="../../../assets/img/14.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <p>TV Show</p>
@@ -452,7 +452,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="../assets/img/15.jpg" alt="">
+                            <img src="../../../assets/img/15.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <p>Game Channel</p>
@@ -461,7 +461,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="../assets/img/16.jpg" alt="">
+                            <img src="../../../assets/img/16.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <p>Sport Channel</p>
@@ -470,7 +470,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="../assets/img/17.jpg" alt="">
+                            <img src="../../../assets/img/17.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <p>Travel Channel</p>
@@ -479,7 +479,7 @@
                     </li>
                     <li>
                         <div>
-                            <img src="../assets/img/18.jpg" alt="">
+                            <img src="../../../assets/img/18.jpg" alt="">
                         </div>
                         <div class="blog-content">
                             <p>LifeStyle Channel</p>
@@ -504,19 +504,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/helpers/reast";
+@import "../../../assets/helpers/reast";
 .html-content{
     .Toastscenter{
         .trending{
             ul{
                 .Img19{
-                    background-image: url(../assets/img/19.jpg);
+                    background-image: url(../../../assets/img/19.jpg);
                 }
                 .Img20{
-                    background-image: url(../assets/img/20.jpg);
+                    background-image: url(../../../assets/img/20.jpg);
                 }
                 .Img21{
-                    background-image: url(../assets/img/21.jpg);
+                    background-image: url(../../../assets/img/21.jpg);
                 }
             }
         }

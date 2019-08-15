@@ -10,7 +10,7 @@
                 <th>產品名稱</th>
                 <th width="100">原價</th>
                 <th width="100">售價</th>
-                <th width="90">是否啟用</th>
+                <th width="100">是否啟用</th>
                 <th width="70">編輯</th>
                 <th width="70">刪除</th>
             </thead>

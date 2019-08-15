@@ -6,18 +6,18 @@
         </div>
         <section>
             <div class="set">
-                <div><img src="../../assets/img/store-1.png"></div>
-                <div><img src="../../assets/img/store-2.png"></div>
-                <div><img src="../../assets/img/store-3.jpg"></div>
-                <div><img src="../../assets/img/store-4.jpg"></div>
-                <div><img src="../../assets/img/store-5.png"></div>
+                <div><img src="../../../assets/img/store-1.png"></div>
+                <div><img src="../../../assets/img/store-2.png"></div>
+                <div><img src="../../../assets/img/store-3.jpg"></div>
+                <div><img src="../../../assets/img/store-4.jpg"></div>
+                <div><img src="../../../assets/img/store-5.png"></div>
             </div>
             <div class="set set3">
-                <div><img src="../../assets/img/store-3.jpg"></div>
-                <div><img src="../../assets/img/store-1.png"></div>
-                <div><img src="../../assets/img/store-2.png"></div>
-                <div><img src="../../assets/img/store-5.png"></div>
-                <div><img src="../../assets/img/store-4.jpg"></div>
+                <div><img src="../../../assets/img/store-3.jpg"></div>
+                <div><img src="../../../assets/img/store-1.png"></div>
+                <div><img src="../../../assets/img/store-2.png"></div>
+                <div><img src="../../../assets/img/store-5.png"></div>
+                <div><img src="../../../assets/img/store-4.jpg"></div>
             </div>
         </section> 
         <div class="mr-2 btnCart" v-if="cartNum.carts.length > 0">
@@ -91,13 +91,13 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active" title="特賣大出清">
-                                <img src="../../assets/img/bt_1.jpg" class="d-block w-100" alt="">
+                                <img src="../../../assets/img/bt_1.jpg" class="d-block w-100" alt="">
                             </div>
                             <div class="carousel-item" title="特賣大出清">
-                                <img src="../../assets/img/bt_2.jpg" class="d-block w-100" alt="">
+                                <img src="../../../assets/img/bt_2.jpg" class="d-block w-100" alt="">
                             </div>
                             <div class="carousel-item" title="特賣大出清">
-                                <img src="../../assets/img/bt_3.jpg" class="d-block w-100" alt="">
+                                <img src="../../../assets/img/bt_3.jpg" class="d-block w-100" alt="">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

@@ -36,6 +36,7 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+//驗證切換畫面 是否需要登入
 router.beforeEach((to, from, next) => {
   console.log( 'to' , to , 'from' , from , 'next' , next);
   if (to.meta.requiresAuth) {
