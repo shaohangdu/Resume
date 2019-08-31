@@ -4,7 +4,7 @@
         <div class="wrap" >
             <div class="uptop"><button @click="uptop()"><i class="fas fa-arrow-alt-circle-up fa-3x"></i></button></div>
             <div class="ajax-header" id="skills">
-                <h1> 高 雄 市 政 府 文 化 局 </h1>
+                <h1> 高 雄 市 政 府 文 化 局 text</h1>
                 <select class="selectClass" v-model="selected" @click="getdata()">
                     <option disabled value="">-- 請選擇 --</option>
                     <option :value="item" v-for="(item, key) in postunit" :key="item.id">-- {{item}} --</option>
