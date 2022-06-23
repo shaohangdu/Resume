@@ -16,19 +16,19 @@
 
     <div class="container mb-7">
         <div>
-            <h3 class="font-weight-bold m-4">網頁前端開發技能</h3>
+            <h3 class="font-weight-bold m-4">網站開發技能</h3>
             <div class="row">
-                <div class="col-md-4 col-12">
+                <div class="col-md-4 col-12 mb-5">
                     <h4 class="ml-4 pt-2 SkillBorder "> HTML , CSS</h4> 
                     <div class="text-center"><i class="fab fa-html5 fa-5x text-primary mr-2"></i><i class="fab fa-bootstrap fa-5x text-purple"></i></div>
                     <ul>
                         <li>能夠解決瀏覽器相容性</li>
-                        <li>使用 Bootstrap 4 客製化網頁</li>
-                        <li>能以 SCSS 撰寫更好管理的程式碼</li>
+                        <li>熟悉 Bootstrap 客製化網頁</li>
+                        <li>使用 SCSS 撰寫更好管理的程式碼</li>
                         <li>RWD 的 CSS 語法、技巧</li>
                     </ul>
                 </div>
-                <div class="col-md-4 col-12">
+                <div class="col-md-4 col-12 mb-5">
                     <h4 class="ml-4 pt-2 SkillBorder"> JavaScript </h4> 
                     <div class="text-center"><i class="fab fa-js fa-5x text-warning mr-2"></i><i class="fab fa-vuejs fa-5x text-success"></i></div>
                     <ul>
@@ -38,13 +38,23 @@
                         <li> Ajax / Axios 串接 API 撈取遠端 JSON 資料</li>
                     </ul>
                 </div>
-                <div class="col-md-4 col-12">
+                <div class="col-md-4 col-12 mb-5">
+                    <h4 class="ml-4 pt-2 SkillBorder "> PHP</h4> 
+                    <div class="text-center"><i class="fab fa-php fa-5x text-primary mr-2"></i><i class="fab fa-laravel fa-5x text-purple"></i></div>
+                    <ul>
+                        <li>熟悉 Laravel 框架開發</li>
+                        <li>熟悉 RESTful api 撰寫與功能維護</li>
+                        <li>連接 Database 規劃資料結構</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-12 mb-5">
                     <h4 class="ml-4 pt-2 SkillBorder"> Tools </h4>
                     <div class="text-center"><i class="fab fa-github fa-5x mr-2"></i><i class="fab fa-git-alt fa-5x text-Tangerine"></i></div>
                     <ul>
                         <li> Git / npm </li>
                         <li> Github / Gitlab </li>
                         <li> Chrome Dev Tool </li>
+                        <li> MySQL </li>
                     </ul>
                 </div>
             </div>
@@ -74,8 +84,14 @@
                             </div>
                             <div class="row my-3 timeline-pointer">
                                 <div class="col-12">
-                                    <h3> 2019年 退役 ~</h3>
-                                    <p> 待業中，並持續學習前端技術</p>
+                                    <h3> 2019年 ~ 2022年</h3>
+                                    <p> 派趣行動整合科技股份有限公司，軟體工程師</p>
+                                </div>
+                            </div>
+                            <div class="row my-3 timeline-pointer">
+                                <div class="col-12">
+                                    <h3> 2022年 ~</h3>
+                                    <p> 待業中，並持續學習新技術</p>
                                 </div>
                             </div>
                         </div>
@@ -121,10 +137,16 @@
                                     <div class="progress-bar" data-progress="60" ></div>
                                 </div>
                             </div>
-                            <div class="mb-2">
-                                <span class="skillText"><span class="fab fa-bootstrap"></span> Bootstrap</span>
+                             <div class="mb-2">
+                                <span class="skillText"><span class="fab fa-php"></span> PHP</span>
                                 <div class="progress">
-                                    <div class="progress-bar" data-progress="60" ></div>
+                                    <div class="progress-bar" data-progress="70" ></div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <span class="skillText"><img class="fab-database" src="../assets/img/database2.png" alt=""> MySQL</span>
+                                <div class="progress">
+                                    <div class="progress-bar" data-progress="50" ></div>
                                 </div>
                             </div>
                         </section>
@@ -144,13 +166,14 @@
                     <a target="_blank" href="https://shaohangdu.github.io/text/"><img src="@/assets/html-2.jpg" class="img-fluid border a_hover"></a>
                 </div>
                 <div class="col-md-4 col-12">
-                    <h4 class="mt-2 pt-2 SkillBorder"> 高雄市政府JSON檔</h4> 
+                    <h4 class="mt-2 pt-2 SkillBorder"> AJAX 政府資料開放平臺</h4> 
                     <router-link target="_blank" to="/activity"><img src="@/assets/ajax-title.jpg" class="img-fluid border a_hover mb-2"></router-link>
                 </div>
                 <div class="col-md-4 col-12">
                     <h4 class="mt-2 pt-2 SkillBorder"> Vue 電商購物網站 </h4> 
                     <router-link target="_blank" to="/store/content"><img src="@/assets/store.jpg" class="img-fluid border a_hover mb-2"></router-link>
                 </div>
+
             </div>
         </div>
     </div>
@@ -180,7 +203,6 @@ export default {
                 let windowHeight = $(window).height();//取得網頁高度 
                 //進度條progress bor
                 let SkillTop = $('#skills').position().top;
-                console.log(SkillTop);
                 if(SkillTop<=(scrollPos + windowHeight /2) && !showSkill){
                     showSkill =true;
                     $('#skills .progress-bar').each(function(){

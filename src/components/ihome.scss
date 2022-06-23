@@ -68,12 +68,12 @@ $brand-primary: #039dff;
 }
 
 .section-rotate {
-  transform: rotate(-7deg);
+  transform: rotate(-5deg);
   margin-left: -80px;
   margin-right: -80px;
   padding: 70px 80px 70px 80px;
   .section-rotate-fixed {
-    transform: rotate(7deg);
+    transform: rotate(5deg);
   }
 }
 .bg-gradient1 {
@@ -90,4 +90,12 @@ $brand-primary: #039dff;
 .skillText{
   letter-spacing: 2px;
   font-size: 18px;
+}
+
+.fab-database {
+  display: inline-block;
+  width: 24.5px;
+  z-index: 100;
+  height: 20px;
+  vertical-align: text-bottom;
 }
