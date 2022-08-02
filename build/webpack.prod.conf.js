@@ -60,14 +60,15 @@ const webpackConfig = merge(baseWebpackConfig, {
     // generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
+    // 輸出設定
     new HtmlWebpackPlugin({
       filename: config.build.index,
       template: 'index.html',
-      inject: true,
+      inject: true, 
       minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
+        removeComments: true, // 移除註解
+        collapseWhitespace: true, // 移除空白字元
+        removeAttributeQuotes: true // 移除多餘html屬性，引號
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
       },

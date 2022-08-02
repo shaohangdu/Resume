@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="container my-7">
         <div class="text-center">
-            <img src="@/assets/me.jpg" class="img-fluid rounded-circle mb-2" width="200">
+            <img src="@/assets/me.jpg" class="img-fluid rounded-circle mb-2" width="200" title="自拍照">
             <h2 class="font-weight-bold">杜少航</h2>
             <div>
                 <a href="#" class="text-dark"><i class="fab fa-github fa-2x"></i></a>
@@ -80,12 +80,30 @@
                                 <div class="col-12">
                                     <h3> 2014年 - 2019年</h3>
                                     <p> 中華民國陸軍，志願役士兵</p>
+                                    <strong>
+                                        <ol>
+                                            <li> 無線電電臺值斑、勤務 </li>
+                                            <li> 輪車悍馬保養 </li>
+                                            <li> 專業專長訓練 </li>
+                                            <li> 聯勇操演 </li>
+                                            <li> 專業打掃工人 </li>
+                                        </ol>
+                                    </strong>
                                 </div>
                             </div>
                             <div class="row my-3 timeline-pointer">
                                 <div class="col-12">
                                     <h3> 2019年 ~ 2022年</h3>
                                     <p> 派趣行動整合科技股份有限公司，軟體工程師</p>
+                                    <strong>
+                                        <ol>
+                                            <li> 開發技能: PHP(Laravel)、MySQL、JavaScript </li>
+                                            <li> 開發後台管理系統 </li>
+                                            <li> 開發 Restful API </li>
+                                            <li> 資料庫架構規劃與設計 </li>
+                                            <li> 維護現有系統專案 </li>
+                                        </ol>
+                                    </strong>
                                 </div>
                             </div>
                             <div class="row my-3 timeline-pointer">
@@ -156,31 +174,43 @@
         </div>
     </div>
 
-    <div class="container mb-7 project">
+    <div class="container mb-7">
         <div>
+            <!-- 圖片大小1024＊768 -->
             <h2 class="font-weight-bold m-4">作品集</h2>
-            <div class="row">
+            <div class="protfolio">
+                <router-link target="_blank" to="/index"><img src="@/assets/html-title.jpg" class="img-fluid border a_hover mb-2" title="HTML , CSS 排版"></router-link>
+                <a target="_blank" href="https://shaohangdu.github.io/text/"><img src="@/assets/html-2.jpg" class="img-fluid border a_hover" title="HTML , CSS 排版"></a>
+                <router-link target="_blank" to="/activity"><img src="@/assets/ajax-title.jpg" class="img-fluid border a_hover mb-2" title="政府資料開放平臺"></router-link>
+                <router-link target="_blank" to="/store/content"><img src="@/assets/store.jpg" class="img-fluid border a_hover mb-2" title="Vue 電商購物網站 "></router-link>
+                <a target="_blank" href="https://kclc.ncku.edu.tw/"><img src="@/assets/kclc.jpg" class="img-fluid border a_hover" title="派趣行動整合科技股份有限公司，成大華語中心首頁"></a>
+            </div>
+            <!-- <div class="row">
                 <div class="col-md-4 col-12">
-                    <h4 class="mt-2 pt-2 SkillBorder"> HTML , CSS 排版</h4> 
+                    <h4 class="mt-2 pt-2 SkillBorder"> HTML , CSS </h4>
                     <router-link target="_blank" to="/index"><img src="@/assets/html-title.jpg" class="img-fluid border a_hover mb-2"></router-link>
                     <a target="_blank" href="https://shaohangdu.github.io/text/"><img src="@/assets/html-2.jpg" class="img-fluid border a_hover"></a>
                 </div>
                 <div class="col-md-4 col-12">
-                    <h4 class="mt-2 pt-2 SkillBorder"> AJAX 政府資料開放平臺</h4> 
+                    <h4 class="mt-2 pt-2 SkillBorder"> AJAX 政府資料開放平臺</h4>
                     <router-link target="_blank" to="/activity"><img src="@/assets/ajax-title.jpg" class="img-fluid border a_hover mb-2"></router-link>
                 </div>
                 <div class="col-md-4 col-12">
-                    <h4 class="mt-2 pt-2 SkillBorder"> Vue 電商購物網站 </h4> 
+                    <h4 class="mt-2 pt-2 SkillBorder"> Vue 電商購物網站 </h4>
                     <router-link target="_blank" to="/store/content"><img src="@/assets/store.jpg" class="img-fluid border a_hover mb-2"></router-link>
                 </div>
-
             </div>
+            <div class="row mt-5">
+                <div class="col-md-4 col-12">
+                    <h4 class="mt-2 pt-2 SkillBorder"> 派趣行動整合科技股份有限公司</h4>
+                    <a target="_blank" href="https://kclc.ncku.edu.tw/"><img src="@/assets/kclc.jpg" class="img-fluid border a_hover"></a>
+                </div>
+            </div> -->
         </div>
     </div>
 
     <div class="text-center bg-dark text-white p-2">
         <div>個人履歷 © 2019 shaohang du</div>
-        
     </div>
   </div>
 </template>
@@ -203,11 +233,11 @@ export default {
                 let windowHeight = $(window).height();//取得網頁高度 
                 //進度條progress bor
                 let SkillTop = $('#skills').position().top;
-                if(SkillTop<=(scrollPos + windowHeight /2) && !showSkill){
+                if(SkillTop <= (scrollPos + windowHeight / 2) && !showSkill){
                     showSkill =true;
                     $('#skills .progress-bar').each(function(){
-                    let thisValue = $(this).data('progress');
-                    $(this).css('width',thisValue + '%');
+                        let thisValue = $(this).data('progress');
+                        $(this).css('width',thisValue + '%');
                     });
                 }
             });

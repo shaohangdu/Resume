@@ -12,6 +12,7 @@ function resolve (dir) {
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
+  // 輸入點
   entry: {
     app: './src/main.js'
   },
@@ -23,10 +24,12 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
+    // 審略import 的副檔名 
     extensions: ['.js', '.vue', '.json'],
+    // 路徑的縮寫
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
+      '@': resolve('src'), 
     }
   },
   module: {
@@ -42,6 +45,7 @@ module.exports = {
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
+        // 針對圖檔壓縮 小於1000數值 轉 base 64
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {

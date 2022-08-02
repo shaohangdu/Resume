@@ -47,9 +47,10 @@ router.beforeEach((to, from, next) => {
       if(response.data.success){
         next();
       }else{
-        next({
-          path:'/login',
-        })
+        next();
+        // next({
+        //   path:'/login',
+        // })
       }
 	  });
   } else {
